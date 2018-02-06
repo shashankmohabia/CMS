@@ -1,0 +1,64 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+S:/DevD/CMS/Src/Auth/User.cpp
+User.h
+S:/DevD/CMS/Src/Auth/User.h
+
+S:/DevD/CMS/Src/Auth/User.h
+iostream
+-
+string
+-
+
+S:/DevD/CMS/Src/Conference Details/Conference.cpp
+Conference.h
+S:/DevD/CMS/Src/Conference Details/Conference.h
+
+S:/DevD/CMS/Src/Conference Details/Conference.h
+iostream
+-
+string
+-
+
+S:/DevD/CMS/Src/Init.cpp
+Init.h
+S:/DevD/CMS/Src/Init.h
+
+S:/DevD/CMS/Src/Init.h
+
+S:/DevD/CMS/Src/Registration/Payment.cpp
+Payment.h
+S:/DevD/CMS/Src/Registration/Payment.h
+
+S:/DevD/CMS/Src/Registration/Payment.h
+iostream
+-
+string
+-
+map
+-
+
+S:/DevD/CMS/Src/Registration/Registration.cpp
+Registration.h
+S:/DevD/CMS/Src/Registration/Registration.h
+
+S:/DevD/CMS/Src/Registration/Registration.h
+iostream
+-
+string
+-
+map
+-
+../Auth/User.h
+S:/DevD/CMS/Src/Auth/User.h
+
+S:/DevD/CMS/Src/main.cpp
+iostream
+-
+
