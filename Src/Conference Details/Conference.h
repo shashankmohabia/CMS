@@ -22,13 +22,13 @@ public:
 
     int get_seats_available();
 
-    void set_seat_availability();                       //sets the number of seats available of different types
+    //void set_seat_availability();                       //sets the number of seats available of different types
 
     void show_seat_availability();
 
     void update_seat_availability();
 
-    void set_c_schedule();
+    //void set_c_schedule();
 
     void get_c_name();
 
