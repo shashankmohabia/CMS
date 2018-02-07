@@ -14,7 +14,7 @@ class User {
 protected:
     string _first_name, _last_name, _username, _password, _email, _contact;  //contact optional
     char _gender;
-    bool _superuser_status, _registration_status;;
+    bool _superuser_status, _registration_status;                   //registration status is optional
 
 public:
     User();
@@ -24,6 +24,10 @@ public:
     void save_user();
 
     void delete_user();
+
+    void set_password();
+
+    void change_password();
 
     string get_username();
 
@@ -42,7 +46,7 @@ public:
 class Registered_User : public User {
 private:
     bool _payment_status;
-    string _date_of_registration, _address, _pincode, _city, _state, _country, _registration_type;       //A B C
+    string _date_of_registration, _address, _city, _state, _country, _pincode, _registration_type;       //A B C
 
 public:
     Registered_User();
@@ -62,7 +66,7 @@ public:
 
     string get_registration_type();
 
-    int get_payment_amount();
+    //int get_payment_amount();
 
     bool is_payment_done();
 

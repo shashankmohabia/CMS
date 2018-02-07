@@ -44,6 +44,14 @@ bool User::check_password() {
     return false;
 }
 
+void User::set_password() {
+
+}
+
+void User::change_password() {
+
+}
+
 void Superuser::create_superuser() {
 
 }
