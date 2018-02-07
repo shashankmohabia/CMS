@@ -121,6 +121,3 @@ Registered_User::Registered_User(string, string, string, string, string, string)
 
 }
 
-int Registered_User::get_payment_amount() {
-    return 0;
-}

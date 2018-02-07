@@ -12,9 +12,6 @@ Conference::Conference(string, string, string, string) {
 
 }
 
-void Conference::set_c_schedule() {
-
-}
 
 void Conference::get_c_name() {
 
@@ -60,9 +57,6 @@ int Conference::get_seats_available() {
     return 0;
 }
 
-void Conference::set_seat_availability() {
-
-}
 
 void Conference::update_seat_availability() {
 
