@@ -4,7 +4,7 @@
 
 #include "User.h"
 
-User::User(string first_name, string last_name, string username, string password, string email, string contact, string dor, string address, string city, string state, string country, string pincode, char gender, char r_type) {
+User::User(string first_name, string last_name, string username, string password, string email, string contact, string dor, string address, string city, string state, string country, string pincode, string r_type, char gender) {
     _first_name = first_name;
     _last_name = last_name;
     _username = username;
@@ -37,7 +37,7 @@ string User::get_password() {
     return _password;
 }
 
-char User::get_registration_type() {
+string User::get_registration_type() {
     return _registration_type;
 }
 

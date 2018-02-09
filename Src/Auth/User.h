@@ -24,16 +24,16 @@ class User {
     static map<string, User> _registration_list;
     bool _superuser_status, _payment_status;
     string _first_name, _last_name, _username, _password, _email, _contact;
-    string _date_of_registration, _address, _city, _state, _country, _pincode;       //type = A B C
-    char _gender, _registration_type;
+    string _date_of_registration, _address, _city, _state, _country, _pincode, _registration_type;       //type = A B C
+    char _gender;
 
 
 public:
     User() = default;
 
     //Parametrised constructor
-    // _first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode, _gender, _registration_type
-    User(string, string, string, string, string, string, string, string, string, string, string, string, char, char);
+    // _first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode, _registration_type _gender,
+    User(string, string, string, string, string, string, string, string, string, string, string, string, string, char);
 
     static map<string, User> all();
 
@@ -43,7 +43,7 @@ public:
 
     string get_password();
 
-    char get_registration_type();
+    string get_registration_type();
 
     bool check_password(string);
 

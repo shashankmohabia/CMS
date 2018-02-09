@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -14,9 +15,9 @@ using namespace std;
 class Conference {
 private:
     string _c_name, _c_date, _c_venue, _c_time, _c_schedule;
-    int seats_available;
+    map<string, int> seats_available;
 public:
-    Conference();
+    Conference() = default;
 
     Conference(string, string, string, string);
 
