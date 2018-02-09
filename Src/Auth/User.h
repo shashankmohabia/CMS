@@ -32,7 +32,7 @@ public:
     User() = default;
 
     //Parametrised constructor
-    // _first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode,, _gender, _registration_type
+    // _first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode, _gender, _registration_type
     User(string, string, string, string, string, string, string, string, string, string, string, string, char, char);
 
     static map<string, User> all();
