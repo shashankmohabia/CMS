@@ -4,12 +4,12 @@
 
 #include "User.h"
 
-User::User() {
+User::User(string, string, string, string, string, string, string, string, string, string, string, string, char, char) {
 
 }
 
-User::User(string, string, string, string, string, string, char) {
-
+map<string, User> User::all() {
+    return map<string, User>();
 }
 
 string User::get_username() {
@@ -24,100 +24,58 @@ string User::get_password() {
     return std::string();
 }
 
+char User::get_registration_type() {
+    return 0;
+}
+
+bool User::check_password(string) {
+    return false;
+}
+
+bool User::is_payment_done() {
+    return false;
+}
+
 bool User::is_superuser() {
     return false;
-}
-
-void User::save_user() {
-
-}
-
-void User::delete_user() {
-
-}
-
-bool User::is_registered() {
-    return false;
-}
-
-bool User::check_password() {
-    return false;
-}
-
-void User::set_password() {
-
 }
 
 void User::change_password() {
 
 }
 
-void Superuser::create_superuser() {
+void User::make_payment() {
 
 }
 
-bool Superuser::is_superuser() {
-    return User::is_superuser();
-}
-
-void Superuser::remove_superuser() {
+void User::save() {
 
 }
 
-void Superuser::modify_user_details() {
+void User::remove() {
 
 }
 
-bool Superuser::is_registered() {
-    return User::is_registered();
-}
-
-Superuser::Superuser() {
+void User::show_user_details() {
 
 }
 
-bool Registered_User::is_superuser() {
-    return User::is_superuser();
-}
-
-Registered_User::Registered_User(){
+void User::create_superuser() {
 
 }
 
-
-void Registered_User::make_payment() {
-
-}
-
-void Registered_User::unregister() {
+void User::remove_superuser(string) {
 
 }
 
-void Registered_User::show_user_details() {
+void User::modify_user_details() {
 
 }
 
-bool Registered_User::is_registered() {
-    return User::is_registered();
+UserError::UserError(const string &) {
+
 }
 
-bool Registered_User::is_payment_done() {
-    return false;
-}
-
-string Registered_User::get_date_of_registration() {
+string UserError::print_error() {
     return std::string();
 }
-
-string Registered_User::get_full_address() {
-    return std::string();
-}
-
-string Registered_User::get_registration_type() {
-    return std::string();
-}
-
-Registered_User::Registered_User(string, string, string, string, string, string) {
-
-}
-
