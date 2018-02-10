@@ -14,8 +14,8 @@ using namespace std;
 
 class Registration {
 private:
-    map<string, Registered_User> _registered_user_list;
-    map<string, Superuser> _superuser_list;
+
+
 public:
     Registration();
 

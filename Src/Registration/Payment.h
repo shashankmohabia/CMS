@@ -17,9 +17,9 @@ private:
 public:
     Payment();
 
-    int get_payment_amount();
+    int get_payment_amount(string);
 
-    void add_registration_type();                   //combine add and update to modify
+    void add_registration_type(string, int);                   //combine add and update to modify
 
     void update_registration_type_list();
 

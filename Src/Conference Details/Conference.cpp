@@ -9,6 +9,10 @@ Conference::Conference() {
 }
 
 Conference::Conference(string, string, string, string) {
+    _c_name = c_name;
+    _c_date = c_date;
+    _c_venue = c_venue;
+    _c_time = c_time;
 
 }
 

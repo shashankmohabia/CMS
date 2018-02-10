@@ -4,120 +4,91 @@
 
 #include "User.h"
 
-User::User() {
-
+User::User(string first_name, string last_name, string username, string password, string email, string contact, string dor, string address, string city, string state, string country, string pincode, string r_type, char gender) {
+    _first_name = first_name;
+    _last_name = last_name;
+    _username = username;
+    _password = password;
+    _email = email;
+    _contact = contact;
+    _date_of_registration = dor;
+    _address = address;
+    _city = city;
+    _state = state;
+    _country = country;
+    _pincode = pincode;
+    _gender = gender;
+    _registration_type = r_type;
 }
 
-User::User(string, string, string, string, string, string, char) {
-
+map<string, User> User::all() {
+    return _registration_list;
 }
 
 string User::get_username() {
-    return std::string();
+    return _username;
 }
 
 string User::get_full_name() {
-    return std::string();
+    return _first_name + " " + _last_name;
 }
 
 string User::get_password() {
-    return std::string();
+    return _password;
+}
+
+string User::get_registration_type() {
+    return _registration_type;
+}
+
+bool User::check_password(string password) {
+    return _password == password;
+}
+
+bool User::is_payment_done() {
+    return _payment_status;
 }
 
 bool User::is_superuser() {
-    return false;
-}
-
-void User::save_user() {
-
-}
-
-void User::delete_user() {
-
-}
-
-bool User::is_registered() {
-    return false;
-}
-
-bool User::check_password() {
-    return false;
-}
-
-void User::set_password() {
-
+    return _superuser_status;
 }
 
 void User::change_password() {
 
 }
 
-void Superuser::create_superuser() {
+void User::make_payment() {
 
 }
 
-bool Superuser::is_superuser() {
-    return User::is_superuser();
-}
-
-void Superuser::remove_superuser() {
+void User::save() {
 
 }
 
-void Superuser::modify_user_details() {
+void User::remove() {
 
 }
 
-bool Superuser::is_registered() {
-    return User::is_registered();
-}
-
-Superuser::Superuser() {
+void User::show_user_details() {
 
 }
 
-bool Registered_User::is_superuser() {
-    return User::is_superuser();
-}
-
-Registered_User::Registered_User(){
+void User::create_superuser() {
 
 }
 
-
-void Registered_User::make_payment() {
-
-}
-
-void Registered_User::unregister() {
+void User::remove_superuser(string) {
 
 }
 
-void Registered_User::show_user_details() {
+void User::modify_user_details() {
 
 }
 
-bool Registered_User::is_registered() {
-    return User::is_registered();
+UserError::UserError(const string& err) {
+    _err = err;
 }
 
-bool Registered_User::is_payment_done() {
-    return false;
+string UserError::print_error() {
+    return _err;
 }
-
-string Registered_User::get_date_of_registration() {
-    return std::string();
-}
-
-string Registered_User::get_full_address() {
-    return std::string();
-}
-
-string Registered_User::get_registration_type() {
-    return std::string();
-}
-
-Registered_User::Registered_User(string, string, string, string, string, string) {
-
-}
-

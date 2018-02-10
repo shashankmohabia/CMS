@@ -6,28 +6,36 @@
 
 #include <iostream>
 #include <string>
+#include <map>
 
 using namespace std;
 
-class User {
 
-protected:
-    string _first_name, _last_name, _username, _password, _email, _contact;  //contact optional
+class UserError {
+private:
+    string _err;
+public:
+    explicit UserError(const string &);
+
+    string print_error();
+};
+
+class User {
+    static map<string, User> _registration_list;
+    bool _superuser_status, _payment_status;
+    string _first_name, _last_name, _username, _password, _email, _contact;
+    string _date_of_registration, _address, _city, _state, _country, _pincode, _registration_type;       //type = A B C
     char _gender;
-    bool _superuser_status, _registration_status;                   //registration status is optional
+
 
 public:
-    User();
+    User() = default;
 
-    User(string, string, string, string, string, string, char);
+    //Parametrised constructor
+    // _first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode, _registration_type _gender,
+    User(string, string, string, string, string, string, string, string, string, string, string, string, string, char);
 
-    void save_user();
-
-    void delete_user();
-
-    void set_password();
-
-    void change_password();
+    static map<string, User> all();
 
     string get_username();
 
@@ -35,26 +43,57 @@ public:
 
     string get_password();
 
-    bool check_password();
+    string get_registration_type();
 
+    bool check_password(string);
 
-    virtual bool is_registered();
+    bool is_payment_done();
 
-    virtual bool is_superuser();            // check whether the user is superuser or not
+    bool is_superuser();
+
+    void change_password();
+
+    void make_payment();
+
+    void save();
+
+    void remove();
+
+    void show_user_details();
+
+    void create_superuser();
+
+    void remove_superuser(string);
+
+    void modify_user_details();
 };
+
+
+
+
+
+
+
+
+
+/*
 
 class Registered_User : public User {
 private:
+    static map<string, Registered_User> _registered_user_list;
     bool _payment_status;
     string _date_of_registration, _address, _city, _state, _country, _pincode, _registration_type;       //A B C
 
 public:
-    Registered_User();
+    Registered_User()= default;
 
     Registered_User(string, string, string, string, string, string);
 
+    static map<string, Registered_User> all();
 
     void make_payment();
+
+    void register_user();
 
     void unregister();
 
@@ -76,13 +115,16 @@ public:
 };
 
 class Superuser : public User {
+private:
+    static map<string, Superuser> _superuser_list;
 public:
-    Superuser();
+    Superuser() = default;
 
+    static map<string, Superuser> all();
 
     void create_superuser();
 
-    void remove_superuser();
+    void remove_superuser(string);
 
     void modify_user_details();
 
@@ -91,5 +133,5 @@ public:
     bool is_registered() final;
 
 };
-
+*/
 #endif //CMS_USER_H
