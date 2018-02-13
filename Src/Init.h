@@ -5,6 +5,8 @@
 #ifndef CMS_INIT_H
 #define CMS_INIT_H
 
+#include "Auth/User.h"
+#include "Registration/Registration.h"
 
 class Init {
 public:
