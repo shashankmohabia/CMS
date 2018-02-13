@@ -7,6 +7,7 @@ CMakeFiles/CMS.dir/Src/Auth/User.cpp.obj: ../Src/Auth/User.h
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj: ../Src/Conference\ Details/Conference.cpp
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj: ../Src/Conference\ Details/Conference.h
 
+CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Auth/User.h
 CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Init.cpp
 CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Init.h
 
@@ -17,5 +18,6 @@ CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj: ../Src/Auth/User.h
 CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj: ../Src/Registration/Registration.cpp
 CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj: ../Src/Registration/Registration.h
 
+CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/Init.h
 CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/main.cpp
 

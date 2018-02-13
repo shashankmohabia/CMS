@@ -1,6 +1,10 @@
 #include <iostream>
+#include "Init.h"
+
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    cout << "Chal raha h kya" << endl;
+    Init();
     return 0;
 }

@@ -7,7 +7,8 @@
 
 
 class Init {
-
+public:
+    Init();
 };
 
 

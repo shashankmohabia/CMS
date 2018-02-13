@@ -4,7 +4,7 @@
 
 #include "User.h"
 
-User::User(string first_name, string last_name, string username, string password, string email, string contact, string dor, string address, string city, string state, string country, string pincode, string r_type, char gender) {
+User::User(string first_name, string last_name, string username, string password, string email, string contact, string dor, string address, string city, string state, string country, string pincode, char gender) {
     _first_name = first_name;
     _last_name = last_name;
     _username = username;
@@ -18,10 +18,9 @@ User::User(string first_name, string last_name, string username, string password
     _country = country;
     _pincode = pincode;
     _gender = gender;
-    _registration_type = r_type;
 }
 
-map<string, User> User::all() {
+map<string, User>& User::all() {
     return _registration_list;
 }
 
@@ -62,7 +61,9 @@ void User::make_payment() {
 }
 
 void User::save() {
-
+    cout<<_registration_list.size()<<endl;
+    _registration_list.insert(pair<string, User>(_username, *this));
+    cout<<_registration_list.size()<<endl;
 }
 
 void User::remove() {
