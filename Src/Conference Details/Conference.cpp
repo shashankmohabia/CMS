@@ -4,11 +4,7 @@
 
 #include "Conference.h"
 
-Conference::Conference() {
-
-}
-
-Conference::Conference(string, string, string, string) {
+Conference::Conference(string c_name, string c_date, string c_venue, string c_time) {
     _c_name = c_name;
     _c_date = c_date;
     _c_venue = c_venue;
