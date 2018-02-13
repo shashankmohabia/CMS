@@ -25,11 +25,11 @@ public:
 
     void show_pending_payment_user_list();
 
-    void show_registration_type_list();
+    void show_registration_type_list(string);
 
     void update_registration_list();                    //in case of any problems admin has the right to update registration's list
 
-    int give_total_number_of_registrations();
+    static unsigned long long int give_total_number_of_registrations();
 
     int give_total_number_of_pending_registrations();
 

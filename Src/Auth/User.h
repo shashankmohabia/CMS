@@ -22,18 +22,17 @@ public:
 
 class User {
     static map<string, User> _registration_list;
-    bool _superuser_status, _payment_status;
-    string _first_name, _last_name, _username, _password, _email, _contact, _address, _city, _state, _country, _pincode; //asked during registration
-    string _registration_type;       //type = A B C,   asked while paying
-    string _date_of_registration;     // value added though system
-    char _gender;
+    bool _superuser_status = false, _payment_status = false;
+    string _first_name, _last_name, _username, _password, _email, _contact;
+    string _date_of_registration, _address, _city, _state, _country, _pincode, _registration_type;       //type = A B C
+    char _gender{};
 
 
 public:
     User() = default;
 
     //Parametrised constructor
-    // _first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode, _gender,
+    // _first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode, _gender
     User(string, string, string, string, string, string, string, string, string, string, string, string, char);
 
     static map<string, User>& all();
@@ -52,19 +51,19 @@ public:
 
     bool is_superuser();
 
-    void change_password();
+    void change_password(string);
 
     void make_payment();
 
     void save();
 
-    void remove();
+    void remove(string);
 
     void show_user_details();
 
     void create_superuser();
 
-    void remove_superuser(string);
+    void remove_superuser(string);  // removes by _username
 
     void modify_user_details();
 };
