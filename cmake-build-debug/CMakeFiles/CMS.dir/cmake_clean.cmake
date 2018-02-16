@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CMS.dir/Src/Auth/User.cpp.obj"
   "CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj"
   "CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.obj"
+  "CMakeFiles/CMS.dir/Src/View/Views.cpp.obj"
+  "CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj"
   "CMS.pdb"
   "CMS.exe"
   "CMS.exe.manifest"

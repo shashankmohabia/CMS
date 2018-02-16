@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-F:/Dev/CMS/Src/Auth/User.cpp
+S:/DevD/CMS/Src/Auth/User.cpp
 User.h
-F:/Dev/CMS/Src/Auth/User.h
+S:/DevD/CMS/Src/Auth/User.h
 
-F:/Dev/CMS/Src/Auth/User.h
+S:/DevD/CMS/Src/Auth/User.h
 iostream
 -
 string
@@ -18,11 +18,11 @@ string
 map
 -
 
-F:/Dev/CMS/Src/Conference Details/Conference.cpp
+S:/DevD/CMS/Src/Conference Details/Conference.cpp
 Conference.h
-F:/Dev/CMS/Src/Conference Details/Conference.h
+S:/DevD/CMS/Src/Conference Details/Conference.h
 
-F:/Dev/CMS/Src/Conference Details/Conference.h
+S:/DevD/CMS/Src/Conference Details/Conference.h
 iostream
 -
 string
@@ -30,21 +30,23 @@ string
 map
 -
 
-F:/Dev/CMS/Src/Init.cpp
+S:/DevD/CMS/Src/Init.cpp
 Init.h
-F:/Dev/CMS/Src/Init.h
+S:/DevD/CMS/Src/Init.h
 
-F:/Dev/CMS/Src/Init.h
+S:/DevD/CMS/Src/Init.h
 Auth/User.h
-F:/Dev/CMS/Src/Auth/User.h
+S:/DevD/CMS/Src/Auth/User.h
 Registration/Registration.h
-F:/Dev/CMS/Src/Registration/Registration.h
+S:/DevD/CMS/Src/Registration/Registration.h
+View/Menu.h
+S:/DevD/CMS/Src/View/Menu.h
 
-F:/Dev/CMS/Src/Registration/Payment.cpp
+S:/DevD/CMS/Src/Registration/Payment.cpp
 Payment.h
-F:/Dev/CMS/Src/Registration/Payment.h
+S:/DevD/CMS/Src/Registration/Payment.h
 
-F:/Dev/CMS/Src/Registration/Payment.h
+S:/DevD/CMS/Src/Registration/Payment.h
 iostream
 -
 string
@@ -52,11 +54,11 @@ string
 map
 -
 
-F:/Dev/CMS/Src/Registration/Registration.cpp
+S:/DevD/CMS/Src/Registration/Registration.cpp
 Registration.h
-F:/Dev/CMS/Src/Registration/Registration.h
+S:/DevD/CMS/Src/Registration/Registration.h
 
-F:/Dev/CMS/Src/Registration/Registration.h
+S:/DevD/CMS/Src/Registration/Registration.h
 iostream
 -
 string
@@ -64,11 +66,27 @@ string
 map
 -
 ../Auth/User.h
-F:/Dev/CMS/Src/Auth/User.h
+S:/DevD/CMS/Src/Auth/User.h
 
-F:/Dev/CMS/Src/main.cpp
+S:/DevD/CMS/Src/View/Menu.cpp
+Menu.h
+S:/DevD/CMS/Src/View/Menu.h
+
+S:/DevD/CMS/Src/View/Menu.h
+Views.h
+S:/DevD/CMS/Src/View/Views.h
+
+S:/DevD/CMS/Src/View/Views.cpp
+Views.h
+S:/DevD/CMS/Src/View/Views.h
+
+S:/DevD/CMS/Src/View/Views.h
+iostream
+-
+
+S:/DevD/CMS/Src/main.cpp
 iostream
 -
 Init.h
-F:/Dev/CMS/Src/Init.h
+S:/DevD/CMS/Src/Init.h
 

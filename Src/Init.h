@@ -7,10 +7,13 @@
 
 #include "Auth/User.h"
 #include "Registration/Registration.h"
+#include "View/Menu.h"
 
 class Init {
 public:
     Init();
+
+    void start();
 };
 
 

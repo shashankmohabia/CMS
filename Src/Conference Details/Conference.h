@@ -15,31 +15,23 @@ using namespace std;
 class Conference {
 private:
     string _c_name, _c_date, _c_venue, _c_time, _c_schedule;
-    map<string, int> seats_available;
+    int _seats_available;
 public:
     Conference() = default;
 
-    Conference(string, string, string, string);
+    Conference(string, string, string, string, int);
 
     int get_seats_available();
 
-    //void set_seat_availability();                       //sets the number of seats available of different types
+    string get_c_name();
 
-    void show_seat_availability();
+    string get_c_date();
 
-    void update_seat_availability();
+    string get_c_venue();
 
-    //void set_c_schedule();
+    string get_c_time();
 
-    void get_c_name();
-
-    void get_c_date();
-
-    void get_c_venue();
-
-    void get_c_time();
-
-    void get_c_schedule();
+    string get_c_schedule();
 
     void update_c_name();
 
@@ -50,6 +42,8 @@ public:
     void update_c_venue();
 
     void update_c_schedule();
+
+    void update_seat_availability();
 
     void show_conference_details();
 

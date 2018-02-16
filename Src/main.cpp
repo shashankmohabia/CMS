@@ -3,5 +3,6 @@
 
 int main() {
     Init init;
+    init.start();
     return 0;
 }
