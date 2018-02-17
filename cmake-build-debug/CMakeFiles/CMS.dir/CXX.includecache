@@ -41,6 +41,10 @@ Registration/Registration.h
 S:/DevD/CMS/Src/Registration/Registration.h
 View/Menu.h
 S:/DevD/CMS/Src/View/Menu.h
+Conference Details/Conference.h
+S:/DevD/CMS/Src/Conference Details/Conference.h
+Registration/Payment.h
+S:/DevD/CMS/Src/Registration/Payment.h
 
 S:/DevD/CMS/Src/Registration/Payment.cpp
 Payment.h
@@ -79,10 +83,22 @@ S:/DevD/CMS/Src/View/Views.h
 S:/DevD/CMS/Src/View/Views.cpp
 Views.h
 S:/DevD/CMS/Src/View/Views.h
+../Init.h
+S:/DevD/CMS/Src/Init.h
 
 S:/DevD/CMS/Src/View/Views.h
 iostream
 -
+ctime
+-
+chrono
+-
+../Auth/User.h
+S:/DevD/CMS/Src/Auth/User.h
+../Conference Details/Conference.h
+S:/DevD/CMS/Src/Conference Details/Conference.h
+../Registration/Payment.h
+S:/DevD/CMS/Src/Registration/Payment.h
 
 S:/DevD/CMS/Src/main.cpp
 iostream

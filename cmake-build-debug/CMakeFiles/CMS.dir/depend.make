@@ -8,8 +8,10 @@ CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj: ../Src/Conference\
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj: ../Src/Conference\ Details/Conference.h
 
 CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Auth/User.h
+CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Conference\ Details/Conference.h
 CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Init.cpp
 CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Init.h
+CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Registration/Payment.h
 CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/Registration/Registration.h
 CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/View/Menu.h
 CMakeFiles/CMS.dir/Src/Init.cpp.obj: ../Src/View/Views.h
@@ -21,15 +23,26 @@ CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj: ../Src/Auth/User.h
 CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj: ../Src/Registration/Registration.cpp
 CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj: ../Src/Registration/Registration.h
 
+CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj: ../Src/Auth/User.h
+CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj: ../Src/Conference\ Details/Conference.h
+CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj: ../Src/Registration/Payment.h
 CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj: ../Src/View/Menu.cpp
 CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj: ../Src/View/Menu.h
 CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj: ../Src/View/Views.h
 
+CMakeFiles/CMS.dir/Src/View/Views.cpp.obj: ../Src/Auth/User.h
+CMakeFiles/CMS.dir/Src/View/Views.cpp.obj: ../Src/Conference\ Details/Conference.h
+CMakeFiles/CMS.dir/Src/View/Views.cpp.obj: ../Src/Init.h
+CMakeFiles/CMS.dir/Src/View/Views.cpp.obj: ../Src/Registration/Payment.h
+CMakeFiles/CMS.dir/Src/View/Views.cpp.obj: ../Src/Registration/Registration.h
+CMakeFiles/CMS.dir/Src/View/Views.cpp.obj: ../Src/View/Menu.h
 CMakeFiles/CMS.dir/Src/View/Views.cpp.obj: ../Src/View/Views.cpp
 CMakeFiles/CMS.dir/Src/View/Views.cpp.obj: ../Src/View/Views.h
 
 CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/Auth/User.h
+CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/Conference\ Details/Conference.h
 CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/Init.h
+CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/Registration/Payment.h
 CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/Registration/Registration.h
 CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/View/Menu.h
 CMakeFiles/CMS.dir/Src/main.cpp.obj: ../Src/View/Views.h

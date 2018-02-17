@@ -19,7 +19,7 @@ private:
 public:
     Conference() = default;
 
-    Conference(string, string, string, string, int);
+    Conference(string, string, string, string, int);    //_c_name, _c_date, _c_venue, _c_time. seats
 
     int get_seats_available();
 
@@ -33,6 +33,8 @@ public:
 
     string get_c_schedule();
 
+    void update_seat_available(int);
+
     void update_c_name();
 
     void update_c_date();
@@ -43,11 +45,12 @@ public:
 
     void update_c_schedule();
 
-    void update_seat_availability();
-
     void show_conference_details();
 
 };
+
+
+extern Conference* conference;
 
 
 #endif //CMS_CONFERENCE_H

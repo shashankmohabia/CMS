@@ -9,8 +9,11 @@ Init::Init() {
     // Dummy Data
     User user("Lakshya", "Garg", "lakshyagarg", "lakshyagarg", "garg.2@iitj.ac.in", "8283875162", "13022018", "316, B1",
               "Jodhpur", "Rajasthan", "India", "342037", 'M');
-    user.create_superuser();
+    //user.create_superuser();
     user.save();
+    conference = new Conference("IEEE", "2 oct", "Jaipur", "12:12 pm", 50);
+    Payment::add_registration_type("Normal", 600);
+    Payment::add_registration_type("VIP", 2000);
 }
 
 void Init::start() {

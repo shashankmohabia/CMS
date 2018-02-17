@@ -34,6 +34,26 @@ void Menu::display() {
             _current_view = new DetailView;
             break;
         }
+        case USER_DASHBOARD: {
+            _current_view = new UserDashboardView;
+            break;
+        }
+        case ADMIN_DASHBOARD: {
+            _current_view = new AdminDashboardView;
+            break;
+        }
+        case PROFILE: {
+            _current_view = new ProfileView;
+            break;
+        }
+        case PAYMENT: {
+            _current_view = new PaymentView;
+            break;
+        }
+        case REGISTER_DETAILS: {
+            _current_view = new RegisterDetailView;
+            break;
+        }
         case EXIT: {
             EXIT_CODE = true;
             return;

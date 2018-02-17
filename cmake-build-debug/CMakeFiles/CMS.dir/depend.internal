@@ -9,8 +9,10 @@ CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj
  S:/DevD/CMS/Src/Conference Details/Conference.h
 CMakeFiles/CMS.dir/Src/Init.cpp.obj
  S:/DevD/CMS/Src/Auth/User.h
+ S:/DevD/CMS/Src/Conference Details/Conference.h
  S:/DevD/CMS/Src/Init.cpp
  S:/DevD/CMS/Src/Init.h
+ S:/DevD/CMS/Src/Registration/Payment.h
  S:/DevD/CMS/Src/Registration/Registration.h
  S:/DevD/CMS/Src/View/Menu.h
  S:/DevD/CMS/Src/View/Views.h
@@ -22,15 +24,26 @@ CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj
  S:/DevD/CMS/Src/Registration/Registration.cpp
  S:/DevD/CMS/Src/Registration/Registration.h
 CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj
+ S:/DevD/CMS/Src/Auth/User.h
+ S:/DevD/CMS/Src/Conference Details/Conference.h
+ S:/DevD/CMS/Src/Registration/Payment.h
  S:/DevD/CMS/Src/View/Menu.cpp
  S:/DevD/CMS/Src/View/Menu.h
  S:/DevD/CMS/Src/View/Views.h
 CMakeFiles/CMS.dir/Src/View/Views.cpp.obj
+ S:/DevD/CMS/Src/Auth/User.h
+ S:/DevD/CMS/Src/Conference Details/Conference.h
+ S:/DevD/CMS/Src/Init.h
+ S:/DevD/CMS/Src/Registration/Payment.h
+ S:/DevD/CMS/Src/Registration/Registration.h
+ S:/DevD/CMS/Src/View/Menu.h
  S:/DevD/CMS/Src/View/Views.cpp
  S:/DevD/CMS/Src/View/Views.h
 CMakeFiles/CMS.dir/Src/main.cpp.obj
  S:/DevD/CMS/Src/Auth/User.h
+ S:/DevD/CMS/Src/Conference Details/Conference.h
  S:/DevD/CMS/Src/Init.h
+ S:/DevD/CMS/Src/Registration/Payment.h
  S:/DevD/CMS/Src/Registration/Registration.h
  S:/DevD/CMS/Src/View/Menu.h
  S:/DevD/CMS/Src/View/Views.h

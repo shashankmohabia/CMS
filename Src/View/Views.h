@@ -6,6 +6,11 @@
 #define CMS_VIEWS_H
 
 #include <iostream>
+#include <ctime>
+#include <chrono>
+#include "../Auth/User.h"
+#include "../Conference Details/Conference.h"
+#include "../Registration/Payment.h"
 
 using namespace std;
 
@@ -14,6 +19,11 @@ enum VIEW_CHOICES {
     LOGIN,
     REGISTER,
     DETAIL,
+    USER_DASHBOARD,
+    ADMIN_DASHBOARD,
+    PROFILE,
+    PAYMENT,
+    REGISTER_DETAILS,
     EXIT
 };
 
@@ -63,5 +73,49 @@ public:
     ~DetailView() override = default;
 };
 
+class UserDashboardView : public Views {
+public:
+    UserDashboardView() = default;
+
+    VIEW_CHOICES display() override;
+
+    ~UserDashboardView() override = default;
+};
+
+class AdminDashboardView : public Views {
+public:
+    AdminDashboardView() = default;
+
+    VIEW_CHOICES display() override;
+
+    ~AdminDashboardView() override = default;
+};
+
+class ProfileView : public Views {
+public:
+    ProfileView() = default;
+
+    VIEW_CHOICES display() override;
+
+    ~ProfileView() override = default;
+};
+
+class PaymentView : public Views {
+public:
+    PaymentView() = default;
+
+    VIEW_CHOICES display() override;
+
+    ~PaymentView() override = default;
+};
+
+class RegisterDetailView : public Views {
+public:
+    RegisterDetailView() = default;
+
+    VIEW_CHOICES display() override;
+
+    ~RegisterDetailView() override = default;
+};
 
 #endif //CMS_VIEWS_H

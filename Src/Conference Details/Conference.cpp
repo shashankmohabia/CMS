@@ -4,13 +4,15 @@
 
 #include "Conference.h"
 
-Conference::Conference(string c_name, string c_date, string c_venue, string c_time, int seats_available) {
-    _c_name = c_name;
-    _c_date = c_date;
-    _c_venue = c_venue;
-    _c_time = c_time;
-    _seats_available = seats_available;
 
+Conference* conference = new Conference;
+
+Conference::Conference(string c_name, string c_date, string c_venue, string c_time, int seats_available) {
+    _c_name = std::move(c_name);
+    _c_date = std::move(c_date);
+    _c_venue = std::move(c_venue);
+    _c_time = std::move(c_time);
+    _seats_available = seats_available;
 }
 
 
@@ -59,11 +61,10 @@ int Conference::get_seats_available() {
 }
 
 
-void Conference::update_seat_availability() {
+void Conference::show_conference_details() {
 
 }
 
-
-void Conference::show_conference_details() {
-
+void Conference::update_seat_available(int seats) {
+    _seats_available = seats;
 }

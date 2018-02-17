@@ -61,12 +61,13 @@ public:
 
     void show_user_details();
 
-    void create_superuser();
+    void create_superuser(string);
 
     void remove_superuser(string);  // removes by _username
 
     void modify_user_details();
 };
 
+extern User* current_user;
 
 #endif //CMS_USER_H
