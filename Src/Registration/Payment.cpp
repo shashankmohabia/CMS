@@ -4,16 +4,14 @@
 
 #include "Payment.h"
 
-Payment::Payment() {
-
-}
+map<string, int> Payment::_registration_type_list = {};
 
 int Payment::get_payment_amount(string type) {
-    return registration_type_list.find(type)->second;
+    return _registration_type_list.find(type)->second;
 }
 
 void Payment::add_registration_type(string type, int amount) {
-    registration_type_list.insert(pair<string, int>(type, amount));
+    _registration_type_list.insert(pair<string, int>(type, amount));
 }
 
 void Payment::update_registration_type_list() {

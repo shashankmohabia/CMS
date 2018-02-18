@@ -13,7 +13,6 @@
 using namespace std;
 
 class Registration {
-private:
 
 
 public:
@@ -27,19 +26,19 @@ public:
 
     void show_registration_type_list(string);
 
+    void show_admin_list();
+
     void update_registration_list();                    //in case of any problems admin has the right to update registration's list
+
+    void update_admin_list();
+
+    static int give_total_number_of_admins();
 
     static unsigned long long int give_total_number_of_registrations();
 
     int give_total_number_of_pending_registrations();
 
     int give_total_number_of_authorised_registrations();
-
-    void show_admin_list();
-
-    void update_admin_list();
-
-    int give_total_number_of_admins();
 };
 
 

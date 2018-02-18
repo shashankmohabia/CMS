@@ -4,12 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "F:/Dev/CMS/Src/Auth/User.cpp" "F:/Dev/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Auth/User.cpp.obj"
-  "F:/Dev/CMS/Src/Conference Details/Conference.cpp" "F:/Dev/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj"
-  "F:/Dev/CMS/Src/Init.cpp" "F:/Dev/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Init.cpp.obj"
-  "F:/Dev/CMS/Src/Registration/Payment.cpp" "F:/Dev/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.obj"
-  "F:/Dev/CMS/Src/Registration/Registration.cpp" "F:/Dev/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj"
-  "F:/Dev/CMS/Src/main.cpp" "F:/Dev/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/main.cpp.obj"
+  "S:/DevD/CMS/Src/Auth/User.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Auth/User.cpp.obj"
+  "S:/DevD/CMS/Src/Conference Details/Conference.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj"
+  "S:/DevD/CMS/Src/Init.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Init.cpp.obj"
+  "S:/DevD/CMS/Src/Registration/Payment.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.obj"
+  "S:/DevD/CMS/Src/Registration/Registration.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj"
+  "S:/DevD/CMS/Src/View/Menu.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj"
+  "S:/DevD/CMS/Src/View/Views.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Views.cpp.obj"
+  "S:/DevD/CMS/Src/main.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -6,6 +6,8 @@
 
 map<string, User> User::_registration_list = {};
 
+User* current_user = new User;
+
 User::User(string first_name, string last_name, string username, string password, string email, string contact, string dor, string address, string city, string state, string country, string pincode, char gender) {
     _first_name = std::move(first_name);
     _last_name = std::move(last_name);
@@ -60,7 +62,7 @@ void User::change_password(string new_password) {
 }
 
 void User::make_payment() {
-
+    _payment_status = true;
 }
 
 void User::save() {
@@ -85,7 +87,7 @@ void User::show_user_details() {
 
 }
 
-void User::create_superuser() {
+void User::create_superuser(string username) {
     if(_superuser_status) {
         UserError("This User is already a superuser!");
     }
@@ -94,7 +96,7 @@ void User::create_superuser() {
     }
 }
 
-void User::remove_superuser(string) {
+void User::remove_superuser(string username) {
     if(!_superuser_status) {
         UserError("This User is already not a superuser!");
     }

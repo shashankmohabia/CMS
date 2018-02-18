@@ -7,10 +7,18 @@
 
 #include "Auth/User.h"
 #include "Registration/Registration.h"
+#include "View/Menu.h"
+#include "Conference Details/Conference.h"
+#include "Registration/Payment.h"
+
+
+
 
 class Init {
 public:
     Init();
+
+    void start();
 };
 
 

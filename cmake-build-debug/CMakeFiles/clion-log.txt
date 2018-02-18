@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" F:\Dev\CMS
+"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" S:\DevD\CMS
 -- Configuring done
 -- Generating done
--- Build files have been written to: F:/Dev/CMS/cmake-build-debug
+-- Build files have been written to: S:/DevD/CMS/cmake-build-debug
