@@ -43,6 +43,24 @@ public:
 
     string get_password();
 
+    string get_email();
+
+    string get_contact();
+
+    string get_date_of_registration();
+
+    string get_address();
+
+    string get_city();
+
+    string get_state();
+
+    string get_country();
+
+    string get_pincode();
+
+    char get_gender();
+
     string get_registration_type();
 
     bool check_password(string);
@@ -66,6 +84,8 @@ public:
     void remove_superuser(string);  // removes by _username
 
     void modify_user_details();
+
+    void create_superuser();
 };
 
 extern User* current_user;

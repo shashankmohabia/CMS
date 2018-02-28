@@ -3,7 +3,6 @@
 //
 
 #include "Views.h"
-#include "../Init.h"
 
 
 VIEW_CHOICES Views::display() {
@@ -49,7 +48,9 @@ VIEW_CHOICES LoginView::display() {
     auto user = User::all().find(username);
     if (user != User::all().end()) {
         if (user->second.check_password(password)) {
+            //cout << user->second.get_full_name();
             current_user = &(user->second);
+            //cout << current_user->is_superuser();
             if (current_user->is_superuser()) {
                 return VIEW_CHOICES(ADMIN_DASHBOARD);
             } else {
@@ -121,9 +122,9 @@ VIEW_CHOICES RegisterView::display() {
 
 
 VIEW_CHOICES UserDashboardView::display() {
-    cout << "Welcome " << current_user->get_full_name() << endl;
+    cout << "Hi " << current_user->get_full_name() << endl;
     user_dashboard:
-    cout << "What do you want to do today!" << endl;
+    cout << "What do you want to do!" << endl;
     int choice;
     cout << "1. Make Payment\n2. User Profile\n3. Conference Details\n4. Logout" << endl;
     cin >> choice;
@@ -148,9 +149,9 @@ VIEW_CHOICES UserDashboardView::display() {
 }
 
 VIEW_CHOICES AdminDashboardView::display() {
-    cout << "Welcome " << current_user->get_full_name() << endl;
+    cout << "Hi " << current_user->get_full_name() << endl;
     user_dashboard:
-    cout << "What do you want to do today!" << endl;
+    cout << "What do you want to do!" << endl;
     int choice;
     cout << "1. User Profile\n2. Conference Details\n3.Registered Data\n4.Update Conference Details\n5.Make Superuser\n6.Remove Superuser\n7.Remove User\n8.Modify User Details\n10. Logout" << endl;
     cin >> choice;
@@ -176,7 +177,7 @@ VIEW_CHOICES AdminDashboardView::display() {
                     UserError("This user is already a superuser!");
                 }
                 else{
-                    user->second.create_superuser();
+                    user->second.create_superuser(username);
                 }
             }
             else {
@@ -189,7 +190,7 @@ VIEW_CHOICES AdminDashboardView::display() {
             auto user = User::all().find(username);
             if(user!=User::all().end()){
                 if(user->second.is_superuser()){
-                    user->second.remove_superuser();
+                    user->second.remove_superuser(username);
                 }
                 else{
                     UserError("This user is already not a superuser!");
@@ -207,6 +208,24 @@ VIEW_CHOICES AdminDashboardView::display() {
 }
 
 VIEW_CHOICES ProfileView::display() {
+    cout << "Profile View\n\n";
+    cout << "Name: \t\t\t\t\t" << current_user->get_full_name() << "\n";
+    cout << "User Name: \t\t\t\t" << current_user->get_username() << "\n";
+    cout << "Email ID: \t\t\t\t" << current_user->get_email() << "\n";
+    cout << "Gender: \t\t\t\t" << current_user->get_gender() << "\n";
+    cout << "Contact: \t\t\t\t" << current_user->get_contact() << "\n";
+    cout << "Date of Registration: \t" << current_user->get_date_of_registration() << "\n";
+    cout << "Address: \t\t\t\t" << current_user->get_address() << "\n";
+    cout << "City: \t\t\t\t\t" << current_user->get_city() << "\n";
+    cout << "State: \t\t\t\t\t" << current_user->get_state() << "\n";
+    cout << "Country: \t\t\t\t" << current_user->get_country() << "\n";
+    cout << "Pincode: \t\t\t\t" << current_user->get_pincode() << "\n\n";
+    if(current_user->is_superuser()){
+        return ADMIN_DASHBOARD;
+    }
+    else{
+        return USER_DASHBOARD;
+    }
 }
 
 VIEW_CHOICES PaymentView::display() {
@@ -248,10 +267,71 @@ VIEW_CHOICES PaymentView::display() {
 }
 
 VIEW_CHOICES DetailView::display() {
-    cout << "Detail view" << endl;
-    return VIEW_CHOICES(EXIT);
+    cout << "Conference Detail view\n\n";
+    cout << "Name: \t\t\t\t\t\t" << conference->get_c_name() << endl;
+    cout << "Date: \t\t\t\t\t\t" << conference->get_c_date() << endl;
+    cout << "Time: \t\t\t\t\t\t" << conference->get_c_time() << endl;
+    cout << "Venue: \t\t\t\t\t\t" << conference->get_c_venue() << endl;
+    cout << "Current Seat Availability: \t" << conference->get_seats_available() << "\n\n";
+    if(current_user == nullptr) {
+        return VIEW_CHOICES(SPLASH);
+    }
+    else if(current_user->is_superuser()) {
+        return VIEW_CHOICES(ADMIN_DASHBOARD);
+    }
+    else {
+        return VIEW_CHOICES(USER_DASHBOARD);
+    }
 }
 
 VIEW_CHOICES RegisterDetailView::display() {
-    return Views::display();
+    if(!current_user->is_superuser()){
+        cout << "\n\nExcess Denied\n\n";
+        return VIEW_CHOICES (USER_DASHBOARD);
+    }
+    cout << "Registration Detail View\n\n";
+    cout << "Total Number of Admins = " << Registration::give_total_number_of_admins() << endl;
+    cout << "Total Number of Registrations = " << Registration::give_total_number_of_registrations() << endl;
+    cout << "Total Number of Pending Registrations = " << Registration::give_total_number_of_pending_registrations() << endl;
+    cout << "Total Number of Authorized Registrations = " << Registration::give_total_number_of_authorised_registrations() << endl;
+    cout << "\nChoose any one of the options\n";
+    cout << "1. Show Authenticated User List\n2. Show Registered User List\n3. Show Pending Payment User List\n4. Show Registration Type List\n5. Show Admin List\n6. Update Registration List\n7. Update Admin List\nEnter any other number to go back to the Dashboard\n";
+    int choice;
+    cin >> choice;
+    switch (choice) {
+        case 1: {
+            Registration::show_authenticated_user_list();
+            break;
+        }
+        case 2: {
+            Registration::show_registered_user_list();
+            break;
+        }
+        case 3: {
+            Registration::show_pending_payment_user_list();
+            break;
+        }
+        case 4: {
+            cout << "\nEnter the type of list\n";
+            string r_type;
+            cin >> r_type;
+            Registration::show_registration_type_list(r_type);
+            break;
+        }
+        case 5: {
+            Registration::show_admin_list();
+            break;
+        }
+        case 6: {
+            Registration::update_registration_list();
+            break;
+        }
+        case 7: {
+            Registration::update_admin_list();
+        }
+        default: {
+            return VIEW_CHOICES (ADMIN_DASHBOARD);
+        }
+    }
+    return VIEW_CHOICES (REGISTER_DETAILS);
 }

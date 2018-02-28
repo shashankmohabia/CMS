@@ -19,7 +19,7 @@ private:
 public:
     Conference() = default;
 
-    Conference(string, string, string, string, int);    //_c_name, _c_date, _c_venue, _c_time. seats
+    Conference(string, string, string, string, int);    //_c_name, _c_date, _c_venue, _c_time, _seats_available
 
     int get_seats_available();
 

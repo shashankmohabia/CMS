@@ -1,16 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CMS.dir/Src/main.cpp.obj"
-  "CMakeFiles/CMS.dir/Src/Init.cpp.obj"
-  "CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj"
-  "CMakeFiles/CMS.dir/Src/Auth/User.cpp.obj"
-  "CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj"
-  "CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.obj"
-  "CMakeFiles/CMS.dir/Src/View/Views.cpp.obj"
-  "CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj"
+  "CMakeFiles/CMS.dir/Src/main.cpp.o"
+  "CMakeFiles/CMS.dir/Src/Init.cpp.o"
+  "CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o"
+  "CMakeFiles/CMS.dir/Src/Auth/User.cpp.o"
+  "CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o"
+  "CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o"
+  "CMakeFiles/CMS.dir/Src/View/Views.cpp.o"
+  "CMakeFiles/CMS.dir/Src/View/Menu.cpp.o"
   "CMS.pdb"
-  "CMS.exe"
-  "CMS.exe.manifest"
-  "libCMS.dll.a"
+  "CMS"
 )
 
 # Per-language clean rules from dependency scanning.

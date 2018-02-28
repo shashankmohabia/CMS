@@ -18,27 +18,27 @@ class Registration {
 public:
     Registration();
 
-    void show_authenticated_user_list();                //shows list of users who made complete payments
+    static void show_authenticated_user_list();                //shows list of users who made complete payments
 
-    void show_registered_user_list();
+    static void show_registered_user_list();
 
-    void show_pending_payment_user_list();
+    static void show_pending_payment_user_list();
 
-    void show_registration_type_list(string);
+    static void show_registration_type_list(string);
 
-    void show_admin_list();
+    static void show_admin_list();
 
-    void update_registration_list();                    //in case of any problems admin has the right to update registration's list
+    static void update_registration_list();                    //in case of any problems admin has the right to update registration's list
 
-    void update_admin_list();
+    static void update_admin_list();
 
     static int give_total_number_of_admins();
 
     static unsigned long long int give_total_number_of_registrations();
 
-    int give_total_number_of_pending_registrations();
+    static int give_total_number_of_pending_registrations();
 
-    int give_total_number_of_authorised_registrations();
+    static int give_total_number_of_authorised_registrations();
 };
 
 
