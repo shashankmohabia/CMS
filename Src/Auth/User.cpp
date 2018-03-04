@@ -88,25 +88,67 @@ void User::show_user_details() {
 }
 
 void User::create_superuser(string username) {
-    if(_superuser_status) {
+    auto user = User::all().find(username)->second;
+    if(user.is_superuser()) {
         UserError("This User is already a superuser!");
     }
     else {
-        _superuser_status = true;
+        user._superuser_status = true;
     }
 }
 
 void User::remove_superuser(string username) {
-    if(!_superuser_status) {
+    auto user = User::all().find(username)->second;
+    if(!user.is_superuser()) {
         UserError("This User is already not a superuser!");
     }
     else {
-        _superuser_status = false;
+        user._superuser_status = false;
     }
 }
 
 void User::modify_user_details() {
 
+}
+
+string User::get_email() {
+    return _email;
+}
+
+string User::get_contact() {
+    return _contact;
+}
+
+string User::get_date_of_registration() {
+    return _date_of_registration;
+}
+
+string User::get_address() {
+    return _address;
+}
+
+string User::get_city() {
+    return _city;
+}
+
+string User::get_state() {
+    return _state;
+}
+
+string User::get_country() {
+    return _country;
+}
+
+string User::get_pincode() {
+    return _pincode;
+}
+
+char User::get_gender() {
+    return _gender;
+}
+
+void User::create_superuser() {
+    _superuser_status = true;
 }
 
 UserError::UserError(const string& err) {

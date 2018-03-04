@@ -8,124 +8,128 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="S:/DevD/CMS/cmake-build-debug"/>
+				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="CMS">
-				<Option output="S:/DevD/CMS/cmake-build-debug/CMS.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="S:/DevD/CMS/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include/c++"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include/c++/mingw32"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include/c++/backward"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/../../../../include"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMS"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="CMS/fast">
-				<Option output="S:/DevD/CMS/cmake-build-debug/CMS.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="S:/DevD/CMS/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include/c++"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include/c++/mingw32"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include/c++/backward"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/../../../../include"/>
-					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/4.9.2/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMS/fast"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="S:/DevD/CMS/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="S:/DevD/CMS/cmake-build-debug"/>
+				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;S:/DevD/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CMS">
+				<Option output="/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMS"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CMS/fast">
+				<Option output="/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMS/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="S:/DevD/CMS/Src/Auth/User.cpp">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Auth/User.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Auth/User.h">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Auth/User.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Conference Details/Conference.cpp">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Conference Details/Conference.h">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Init.cpp">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Init.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Init.h">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Init.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Registration/Payment.cpp">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Registration/Payment.h">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Registration/Registration.cpp">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/Registration/Registration.h">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/View/Menu.cpp">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/View/Menu.h">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/View/Menu.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/View/Views.cpp">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/View/Views.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/View/Views.h">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/View/Views.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/Src/main.cpp">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/main.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="S:/DevD/CMS/CMakeLists.txt">
+		<Unit filename="/home/lakshya/CLionProjects/CMS/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

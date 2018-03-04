@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "S:/DevD/CMS/Src/Auth/User.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Auth/User.cpp.obj"
-  "S:/DevD/CMS/Src/Conference Details/Conference.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.obj"
-  "S:/DevD/CMS/Src/Init.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Init.cpp.obj"
-  "S:/DevD/CMS/Src/Registration/Payment.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.obj"
-  "S:/DevD/CMS/Src/Registration/Registration.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.obj"
-  "S:/DevD/CMS/Src/View/Menu.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Menu.cpp.obj"
-  "S:/DevD/CMS/Src/View/Views.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Views.cpp.obj"
-  "S:/DevD/CMS/Src/main.cpp" "S:/DevD/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/main.cpp.obj"
+  "/home/lakshya/CLionProjects/CMS/Src/Auth/User.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Auth/User.cpp.o"
+  "/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o"
+  "/home/lakshya/CLionProjects/CMS/Src/Init.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Init.cpp.o"
+  "/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o"
+  "/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o"
+  "/home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Menu.cpp.o"
+  "/home/lakshya/CLionProjects/CMS/Src/View/Views.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Views.cpp.o"
+  "/home/lakshya/CLionProjects/CMS/Src/main.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

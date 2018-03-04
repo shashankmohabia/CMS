@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-S:/DevD/CMS/Src/Auth/User.cpp
+/home/lakshya/CLionProjects/CMS/Src/Auth/User.cpp
 User.h
-S:/DevD/CMS/Src/Auth/User.h
+/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
 
-S:/DevD/CMS/Src/Auth/User.h
+/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
 iostream
 -
 string
@@ -18,11 +18,11 @@ string
 map
 -
 
-S:/DevD/CMS/Src/Conference Details/Conference.cpp
+/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp
 Conference.h
-S:/DevD/CMS/Src/Conference Details/Conference.h
+/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
 
-S:/DevD/CMS/Src/Conference Details/Conference.h
+/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
 iostream
 -
 string
@@ -30,27 +30,27 @@ string
 map
 -
 
-S:/DevD/CMS/Src/Init.cpp
+/home/lakshya/CLionProjects/CMS/Src/Init.cpp
 Init.h
-S:/DevD/CMS/Src/Init.h
+/home/lakshya/CLionProjects/CMS/Src/Init.h
 
-S:/DevD/CMS/Src/Init.h
+/home/lakshya/CLionProjects/CMS/Src/Init.h
 Auth/User.h
-S:/DevD/CMS/Src/Auth/User.h
+/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
 Registration/Registration.h
-S:/DevD/CMS/Src/Registration/Registration.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h
 View/Menu.h
-S:/DevD/CMS/Src/View/Menu.h
+/home/lakshya/CLionProjects/CMS/Src/View/Menu.h
 Conference Details/Conference.h
-S:/DevD/CMS/Src/Conference Details/Conference.h
+/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
 Registration/Payment.h
-S:/DevD/CMS/Src/Registration/Payment.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
 
-S:/DevD/CMS/Src/Registration/Payment.cpp
+/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.cpp
 Payment.h
-S:/DevD/CMS/Src/Registration/Payment.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
 
-S:/DevD/CMS/Src/Registration/Payment.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
 iostream
 -
 string
@@ -58,11 +58,11 @@ string
 map
 -
 
-S:/DevD/CMS/Src/Registration/Registration.cpp
+/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.cpp
 Registration.h
-S:/DevD/CMS/Src/Registration/Registration.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h
 
-S:/DevD/CMS/Src/Registration/Registration.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h
 iostream
 -
 string
@@ -70,23 +70,21 @@ string
 map
 -
 ../Auth/User.h
-S:/DevD/CMS/Src/Auth/User.h
+/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
 
-S:/DevD/CMS/Src/View/Menu.cpp
+/home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp
 Menu.h
-S:/DevD/CMS/Src/View/Menu.h
+/home/lakshya/CLionProjects/CMS/Src/View/Menu.h
 
-S:/DevD/CMS/Src/View/Menu.h
+/home/lakshya/CLionProjects/CMS/Src/View/Menu.h
 Views.h
-S:/DevD/CMS/Src/View/Views.h
+/home/lakshya/CLionProjects/CMS/Src/View/Views.h
 
-S:/DevD/CMS/Src/View/Views.cpp
+/home/lakshya/CLionProjects/CMS/Src/View/Views.cpp
 Views.h
-S:/DevD/CMS/Src/View/Views.h
-../Init.h
-S:/DevD/CMS/Src/Init.h
+/home/lakshya/CLionProjects/CMS/Src/View/Views.h
 
-S:/DevD/CMS/Src/View/Views.h
+/home/lakshya/CLionProjects/CMS/Src/View/Views.h
 iostream
 -
 ctime
@@ -94,15 +92,17 @@ ctime
 chrono
 -
 ../Auth/User.h
-S:/DevD/CMS/Src/Auth/User.h
+/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
 ../Conference Details/Conference.h
-S:/DevD/CMS/Src/Conference Details/Conference.h
+/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
 ../Registration/Payment.h
-S:/DevD/CMS/Src/Registration/Payment.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
+../Registration/Registration.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h
 
-S:/DevD/CMS/Src/main.cpp
+/home/lakshya/CLionProjects/CMS/Src/main.cpp
 iostream
 -
 Init.h
-S:/DevD/CMS/Src/Init.h
+/home/lakshya/CLionProjects/CMS/Src/Init.h
 
