@@ -31,42 +31,6 @@ string User::get_password() {
     return _password;
 }
 
-string User::get_email() {
-    return _email;
-}
-
-string User::get_contact() {
-    return _contact;
-}
-
-string User::get_date_of_registration() {
-    return _date_of_registration;
-}
-
-string User::get_address() {
-    return _address;
-}
-
-string User::get_city() {
-    return _city;
-}
-
-string User::get_state() {
-    return _state;
-}
-
-string User::get_country() {
-    return _country;
-}
-
-string User::get_pincode() {
-    return _pincode;
-}
-
-char User::get_gender() {
-    return _gender;
-}
-
 bool User::check_password(string password) {
     return _password == password;
 }
@@ -102,7 +66,18 @@ void User::remove(string username) {
 }
 
 void User::show_user_details() {
-
+    cout << "Name: " << get_full_name();
+    cout << "\nUsername: " << _username;
+    cout << "\nE-mail: " << _email;
+    cout << "\nContact: " << _contact;
+    cout << "\nDate of Registration" << _date_of_registration;
+    cout << "\nAddress: " << _address;
+    cout << "\nCity: " << _city;
+    cout << "\nState: " << _state;
+    cout << "\nCountry: " << _country;
+    cout << "\nPincode: " << _pincode;
+    cout << "\nGender" << _gender;
+    cout << "\nSuperuser Status" << _superuser_status <<"\n\n";
 }
 
 void User::create_superuser(string username) {
@@ -111,7 +86,7 @@ void User::create_superuser(string username) {
         UserError("This User is already a superuser!");
     }
     else {
-        /*User::all().find(username)->second.create_superuser();*/
+        User::all().find(username)->second.create_superuser();
     }
 }
 
@@ -121,7 +96,7 @@ void User::remove_superuser(string username) {
         UserError("This User is already not a superuser!");
     }
     else {
-        /*User::all().find(username)->second.remove_superuser();*/
+        User::all().find(username)->second.remove_superuser();
     }
 }
 
@@ -195,13 +170,24 @@ User::User(string first_name, string last_name, string username, string password
     _gender = gender;
 }
 
-/*void User::create_superuser() {
+void User::update_registered_conference_list(string conference, string type) {
+    for(int i=0; i<registered_conference_list.size(); i++){
+        if(registered_conference_list[i].first == conference){
+            UserError("You are already registered for the conference!");
+        }
+        else{
+            registered_conference_list.push_back(pair<string, string>(conference, type));
+        }
+    }
+}
+
+void User::create_superuser() {
     _superuser_status = true;
 }
 
 void User::remove_superuser() {
     _superuser_status = false;
-}*/
+}
 
 UserError::UserError(const string& err) {
     _err = err;

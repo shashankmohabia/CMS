@@ -6,6 +6,7 @@ CMakeFiles/CMS.dir/Src/Auth/User.cpp.o: ../Src/Auth/User.h
 
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o: ../Src/Conference\ Details/Conference.cpp
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o: ../Src/Conference\ Details/Conference.h
+CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o: ../Src/Registration/Payment.h
 
 CMakeFiles/CMS.dir/Src/Init.cpp.o: ../Src/Auth/User.h
 CMakeFiles/CMS.dir/Src/Init.cpp.o: ../Src/Conference\ Details/Conference.h

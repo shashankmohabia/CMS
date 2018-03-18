@@ -59,3 +59,43 @@ void Conference::show_conference_details() {
 void Conference::update_seat_available(int seats) {
     _seats_available = seats;
 }
+
+bool Conference::get_user_payment_status(string, string) {
+    return false;
+}
+
+void Conference::make_payment(string, string) {
+
+}
+
+void Conference::show_final_attendee_list() {
+
+}
+
+void Conference::show_registration_list() {
+
+}
+
+void Conference::show_pending_payment_user_list() {
+
+}
+
+void Conference::show_registration_type_list() {
+
+}
+
+void Conference::update_registration_list() {
+
+}
+
+int Conference::give_total_number_of_registrations() {
+    return 0;
+}
+
+int Conference::give_total_number_of_pending_registrations() {
+    return 0;
+}
+
+int Conference::give_total_number_of_attendees() {
+    return 0;
+}

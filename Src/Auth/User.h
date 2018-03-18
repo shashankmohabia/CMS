@@ -23,8 +23,8 @@ public:
 
 class User {
     static map<string, User> _user_list;
-    /*vector registered_conference_list;*/
-    bool _superuser_status = false, _payment_status = false;
+    vector <pair<string, string> > registered_conference_list;                  //conference, type
+    bool _superuser_status = false;
     string _first_name, _last_name, _username, _password, _email, _contact;
     string _date_of_registration, _address, _city, _state, _country, _pincode;
     char _gender;
@@ -49,24 +49,6 @@ public:
 
     string get_password();
 
-    string get_email();
-
-    string get_contact();
-
-    string get_date_of_registration();
-
-    string get_address();
-
-    string get_city();
-
-    string get_state();
-
-    string get_country();
-
-    string get_pincode();
-
-    char get_gender();
-
     bool check_password(string);        //password
 
     bool is_payment_done(string);       //conference name
@@ -84,6 +66,10 @@ public:
     void create_superuser(string);      //username
 
     void remove_superuser(string);      //username
+
+    void create_superuser();
+
+    void remove_superuser();
 
     void set_first_name(const string &_first_name);
 
@@ -111,7 +97,7 @@ public:
 
     void set_gender(char _gender);
 
-    /*void update_registered_conference_list(string, string);     //conference_name, registeration_type*/
+    void update_registered_conference_list(string, string);     //conference_name, registeration_type
 
 };
 
