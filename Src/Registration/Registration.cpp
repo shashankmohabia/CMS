@@ -6,6 +6,7 @@
 
 Registration::Registration() = default;
 
+/*
 void Registration::show_authenticated_user_list() {
     for (auto &it : User::all()) {
         if(it.second.is_payment_done()){
@@ -85,3 +86,4 @@ int Registration::give_total_number_of_admins() {
     }
     return count;
 }
+*/

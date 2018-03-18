@@ -9,6 +9,8 @@
 /home/lakshya/CLionProjects/CMS/Src/Auth/User.cpp
 User.h
 /home/lakshya/CLionProjects/CMS/Src/Auth/User.h
+utility
+-
 
 /home/lakshya/CLionProjects/CMS/Src/Auth/User.h
 iostream
@@ -16,6 +18,8 @@ iostream
 string
 -
 map
+-
+vector
 -
 
 /home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp
@@ -29,6 +33,10 @@ string
 -
 map
 -
+vector
+-
+../Registration/Payment.h
+/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
 
 /home/lakshya/CLionProjects/CMS/Src/Init.cpp
 Init.h
