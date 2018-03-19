@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <vector>
 
 using namespace std;
 
@@ -21,19 +22,24 @@ public:
 };
 
 class User {
-    static map<string, User> _registration_list;
-    bool _superuser_status = false, _payment_status = false;
+    static map<string, User> _user_list;
+    vector <pair<string, string> > registered_conference_list;                  //conference, type
+    bool _superuser_status = false;
     string _first_name, _last_name, _username, _password, _email, _contact;
-    string _date_of_registration, _address, _city, _state, _country, _pincode, _registration_type;       //type = A B C
-    char _gender{};
+    string _date_of_registration, _address, _city, _state, _country, _pincode;
+    char _gender;
 
 
 public:
     User() = default;
 
     //Parametrised constructor
-    // _first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode, _gender
+    //_first_name, _last_name, _username, _password, _email, _contact, _date_of_registration, _address, _city, _state, _country, _pincode, _gender
     User(string, string, string, string, string, string, string, string, string, string, string, string, char);
+
+    //Parametrised constructor
+    //_username, _password
+    User(string, string);
 
     static map<string, User>& all();
 
@@ -43,49 +49,56 @@ public:
 
     string get_password();
 
-    string get_email();
+    bool check_password(string);        //password
 
-    string get_contact();
-
-    string get_date_of_registration();
-
-    string get_address();
-
-    string get_city();
-
-    string get_state();
-
-    string get_country();
-
-    string get_pincode();
-
-    char get_gender();
-
-    string get_registration_type();
-
-    bool check_password(string);
-
-    bool is_payment_done();
+    bool is_payment_done(string);       //conference name
 
     bool is_superuser();
 
-    void change_password(string);
-
-    void make_payment();
+    void change_password(string);       //password
 
     void save();
 
-    void remove(string);
+    void remove(string);                //user
 
     void show_user_details();
 
-    void create_superuser(string);
+    void create_superuser(string);      //username
 
-    void remove_superuser(string);  // removes by _username
-
-    void modify_user_details();
+    void remove_superuser(string);      //username
 
     void create_superuser();
+
+    void remove_superuser();
+
+    void set_first_name(const string &_first_name);
+
+    void set_last_name(const string &_last_name);
+
+    void set_username(const string &_username);
+
+    void set_password(const string &_password);
+
+    void set_email(const string &_email);
+
+    void set_contact(const string &_contact);
+
+    void set_date_of_registration(const string &_date_of_registration);
+
+    void set_address(const string &_address);
+
+    void set_city(const string &_city);
+
+    void set_state(const string &_state);
+
+    void set_country(const string &_country);
+
+    void set_pincode(const string &_pincode);
+
+    void set_gender(char _gender);
+
+    void update_registered_conference_list(string, string);     //conference_name, registeration_type
+
 };
 
 extern User* current_user;

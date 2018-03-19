@@ -31,7 +31,7 @@ void Menu::display() {
             break;
         }
         case DETAIL: {
-            _current_view = new DetailView;
+            _current_view = new ConferenceDetailView;
             break;
         }
         case USER_DASHBOARD: {

@@ -153,7 +153,7 @@ VIEW_CHOICES AdminDashboardView::display() {
     user_dashboard:
     cout << "What do you want to do!" << endl;
     int choice;
-    cout << "1. User Profile\n2. Conference Details\n3.Registered Data\n4.Update Conference Details\n5.Make Superuser\n6.Remove Superuser\n7.Remove User\n8.Modify User Details\n10. Logout" << endl;
+    cout << "1. User Profile\n2. Conference Details\n3. Registered Data\n4. Update Conference Details\n5. Make Superuser\n6. Remove Superuser\n7. Remove User\n8. Modify User Details\n9. Logout" << endl;
     cin >> choice;
     switch (choice) {
         case 1: {
@@ -200,6 +200,12 @@ VIEW_CHOICES AdminDashboardView::display() {
                 UserError("User doesn't exists");
             }
         }
+        case 7: {
+
+        }
+        case 8: {
+
+        }
         default: {
             cout << "Please select a valid option" << endl;
             goto user_dashboard;
@@ -229,7 +235,7 @@ VIEW_CHOICES ProfileView::display() {
 }
 
 VIEW_CHOICES PaymentView::display() {
-    if (current_user->is_payment_done()) {
+    if (/*current_user->is_payment_done()*/0) {
         cout << "Your payment is done" << endl;
         return VIEW_CHOICES (USER_DASHBOARD);
     }
@@ -257,7 +263,7 @@ VIEW_CHOICES PaymentView::display() {
         cin>>response;
         if(response == 'Y'){
             cout<<"Your payment is successfully received"<<endl;
-            current_user->make_payment();
+            /*current_user->make_payment();*/
             return VIEW_CHOICES (USER_DASHBOARD);
         }
         else{
@@ -266,7 +272,7 @@ VIEW_CHOICES PaymentView::display() {
     }
 }
 
-VIEW_CHOICES DetailView::display() {
+VIEW_CHOICES ConferenceDetailView::display() {
     cout << "Conference Detail view\n\n";
     cout << "Name: \t\t\t\t\t\t" << conference->get_c_name() << endl;
     cout << "Date: \t\t\t\t\t\t" << conference->get_c_date() << endl;
@@ -290,44 +296,44 @@ VIEW_CHOICES RegisterDetailView::display() {
         return VIEW_CHOICES (USER_DASHBOARD);
     }
     cout << "Registration Detail View\n\n";
-    cout << "Total Number of Admins = " << Registration::give_total_number_of_admins() << endl;
+    /*cout << "Total Number of Admins = " << Registration::give_total_number_of_admins() << endl;
     cout << "Total Number of Registrations = " << Registration::give_total_number_of_registrations() << endl;
     cout << "Total Number of Pending Registrations = " << Registration::give_total_number_of_pending_registrations() << endl;
     cout << "Total Number of Authorized Registrations = " << Registration::give_total_number_of_authorised_registrations() << endl;
-    cout << "\nChoose any one of the options\n";
+    */cout << "\nChoose any one of the options\n";
     cout << "1. Show Authenticated User List\n2. Show Registered User List\n3. Show Pending Payment User List\n4. Show Registration Type List\n5. Show Admin List\n6. Update Registration List\n7. Update Admin List\nEnter any other number to go back to the Dashboard\n";
     int choice;
     cin >> choice;
     switch (choice) {
         case 1: {
-            Registration::show_authenticated_user_list();
+            /*Registration::show_authenticated_user_list();*/
             break;
         }
         case 2: {
-            Registration::show_registered_user_list();
+            /*Registration::show_registered_user_list();*/
             break;
         }
         case 3: {
-            Registration::show_pending_payment_user_list();
+            /*Registration::show_pending_payment_user_list();*/
             break;
         }
         case 4: {
             cout << "\nEnter the type of list\n";
             string r_type;
             cin >> r_type;
-            Registration::show_registration_type_list(r_type);
+            /*Registration::show_registration_type_list(r_type);*/
             break;
         }
         case 5: {
-            Registration::show_admin_list();
+            /*Registration::show_admin_list();*/
             break;
         }
         case 6: {
-            Registration::update_registration_list();
+            /*Registration::update_registration_list();*/
             break;
         }
         case 7: {
-            Registration::update_admin_list();
+            /*Registration::update_admin_list();*/
         }
         default: {
             return VIEW_CHOICES (ADMIN_DASHBOARD);
