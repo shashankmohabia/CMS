@@ -176,7 +176,7 @@ void User::update_registered_conference_list(string conference, string type) {
             UserError("You are already registered for the conference!");
         }
         else{
-            registered_conference_list.push_back(pair<string, string>(conference, type));
+            registered_conference_list.emplace_back(conference, type);
         }
     }
 }

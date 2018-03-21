@@ -22,6 +22,8 @@ public:
     static void add_registration_type(string, int);                   //combine add and update to modify
 
     void update_registration_type(string, int);         //type, amount
+
+    static map<string, int>& get_registration_type_list();
 };
 
 
