@@ -214,18 +214,7 @@ VIEW_CHOICES AdminDashboardView::display() {
 }
 
 VIEW_CHOICES ProfileView::display() {
-    cout << "Profile View\n\n";
-    cout << "Name: \t\t\t\t\t" << current_user->get_full_name() << "\n";
-    cout << "User Name: \t\t\t\t" << current_user->get_username() << "\n";
-    cout << "Email ID: \t\t\t\t" << current_user->get_email() << "\n";
-    cout << "Gender: \t\t\t\t" << current_user->get_gender() << "\n";
-    cout << "Contact: \t\t\t\t" << current_user->get_contact() << "\n";
-    cout << "Date of Registration: \t" << current_user->get_date_of_registration() << "\n";
-    cout << "Address: \t\t\t\t" << current_user->get_address() << "\n";
-    cout << "City: \t\t\t\t\t" << current_user->get_city() << "\n";
-    cout << "State: \t\t\t\t\t" << current_user->get_state() << "\n";
-    cout << "Country: \t\t\t\t" << current_user->get_country() << "\n";
-    cout << "Pincode: \t\t\t\t" << current_user->get_pincode() << "\n\n";
+    current_user->show_user_details();
     if(current_user->is_superuser()){
         return ADMIN_DASHBOARD;
     }
