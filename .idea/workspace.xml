@@ -13,10 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="16e1ab52-ee86-4d1e-9784-029ca27961c9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Src/Init.cpp" afterPath="$PROJECT_DIR$/Src/Init.cpp" />
-      <change beforePath="$PROJECT_DIR$/Src/Registration/Payment.cpp" afterPath="$PROJECT_DIR$/Src/Registration/Payment.cpp" />
-      <change beforePath="$PROJECT_DIR$/Src/Registration/Payment.h" afterPath="$PROJECT_DIR$/Src/Registration/Payment.h" />
-      <change beforePath="$PROJECT_DIR$/Src/View/Views.cpp" afterPath="$PROJECT_DIR$/Src/View/Views.cpp" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change beforePath="$PROJECT_DIR$/Src/Init.h" afterPath="$PROJECT_DIR$/Src/Init.h" />
+      <change beforePath="$PROJECT_DIR$/Src/Registration/Registration.cpp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Src/Registration/Registration.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Src/View/Views.h" afterPath="$PROJECT_DIR$/Src/View/Views.h" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMS.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMS.dir/CXX.includecache" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,30 +68,28 @@
       <file leaf-file-name="Init.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/Init.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#90#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Views.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Src/View/Views.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="215" column="37" lean-forward="true" selection-start-line="215" selection-start-column="37" selection-end-line="215" selection-end-column="37" />
+            <state relative-caret-position="126">
+              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Views.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Views.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Src/View/Views.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="215" column="37" lean-forward="false" selection-start-line="215" selection-start-column="37" selection-end-line="215" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Views.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Src/View/Views.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" column="2" lean-forward="false" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+            <state relative-caret-position="632">
+              <caret line="148" column="7" lean-forward="true" selection-start-line="148" selection-start-column="7" selection-end-line="148" selection-end-column="7" />
               <folding>
                 <element signature="e#93#112#0" expanded="true" />
               </folding>
@@ -195,10 +195,8 @@
         <option value="$PROJECT_DIR$/Src/main.cpp" />
         <option value="$PROJECT_DIR$/Src/Registration/Registration.h" />
         <option value="$PROJECT_DIR$/Src/View/Menu.h" />
-        <option value="$PROJECT_DIR$/Src/Init.h" />
         <option value="$PROJECT_DIR$/Src/View/Menu.cpp" />
         <option value="$PROJECT_DIR$/Src/Registration/Registration.cpp" />
-        <option value="$PROJECT_DIR$/Src/View/Views.h" />
         <option value="$PROJECT_DIR$/Src/Auth/User.h" />
         <option value="$PROJECT_DIR$/Src/Auth/User.cpp" />
         <option value="$PROJECT_DIR$/Src/Conference Details/Conference.h" />
@@ -207,6 +205,8 @@
         <option value="$PROJECT_DIR$/Src/Registration/Payment.cpp" />
         <option value="$PROJECT_DIR$/Src/Init.cpp" />
         <option value="$PROJECT_DIR$/Src/View/Views.cpp" />
+        <option value="$PROJECT_DIR$/Src/Init.h" />
+        <option value="$PROJECT_DIR$/Src/View/Views.h" />
       </list>
     </option>
   </component>
@@ -254,25 +254,7 @@
               <item name="CMS" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="CMS" type="462c0819:PsiDirectoryNode" />
               <item name="Src" type="462c0819:PsiDirectoryNode" />
-              <item name="Auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMS" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="CMS" type="462c0819:PsiDirectoryNode" />
-              <item name="Src" type="462c0819:PsiDirectoryNode" />
-              <item name="Conference Details" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMS" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="CMS" type="462c0819:PsiDirectoryNode" />
-              <item name="Src" type="462c0819:PsiDirectoryNode" />
               <item name="Registration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMS" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="CMS" type="462c0819:PsiDirectoryNode" />
-              <item name="Src" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,7 +335,7 @@
       <workItem from="1521459647653" duration="3267000" />
       <workItem from="1521465088075" duration="1680000" />
       <workItem from="1521544542142" duration="2651000" />
-      <workItem from="1521635975729" duration="2026000" />
+      <workItem from="1521635975729" duration="2355000" />
     </task>
     <task id="LOCAL-00001" summary="User model modified to single class">
       <created>1518193328445</created>
@@ -418,22 +400,31 @@
       <option name="project" value="LOCAL" />
       <updated>1521636915953</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated Payment Class!">
+      <created>1521638030111</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1521638030111</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101405000" />
+    <option name="totallyTimeSpent" value="101734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -443,7 +434,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -491,7 +481,8 @@
     <MESSAGE value="Updated Header Files!" />
     <MESSAGE value="Updated User Class!" />
     <MESSAGE value="Updated Conference Class!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Conference Class!" />
+    <MESSAGE value="Updated Payment Class!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Payment Class!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -519,9 +510,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#90#112#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -588,9 +577,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#90#112#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -709,9 +696,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#90#112#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -789,26 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Init.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#90#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/View/Views.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="2" lean-forward="false" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
-          <folding>
-            <element signature="e#93#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Src/Auth/User.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -876,8 +841,26 @@
     <entry file="file://$PROJECT_DIR$/Src/View/Views.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
-          <caret line="215" column="37" lean-forward="true" selection-start-line="215" selection-start-column="37" selection-end-line="215" selection-end-column="37" />
+          <caret line="215" column="37" lean-forward="false" selection-start-line="215" selection-start-column="37" selection-end-line="215" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Init.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/View/Views.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="148" column="7" lean-forward="true" selection-start-line="148" selection-start-column="7" selection-end-line="148" selection-end-column="7" />
+          <folding>
+            <element signature="e#93#112#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
