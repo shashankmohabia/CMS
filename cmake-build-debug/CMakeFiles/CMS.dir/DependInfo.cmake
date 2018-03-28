@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/Init.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Init.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o"
-  "/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Menu.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/View/Views.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Views.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/main.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/main.cpp.o"

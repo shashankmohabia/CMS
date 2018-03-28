@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CMS.dir/Src/main.cpp.o"
   "CMakeFiles/CMS.dir/Src/Init.cpp.o"
-  "CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o"
   "CMakeFiles/CMS.dir/Src/Auth/User.cpp.o"
   "CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o"
   "CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o"

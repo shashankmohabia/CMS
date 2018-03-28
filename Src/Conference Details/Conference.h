@@ -70,6 +70,10 @@ public:
 
     int give_total_number_of_attendees();
 
+    static map<string, Conference>& conference_list();
+
+    Payment payment_details();
+
 };
 
 

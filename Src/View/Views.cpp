@@ -126,11 +126,12 @@ VIEW_CHOICES UserDashboardView::display() {
     user_dashboard:
     cout << "What do you want to do!" << endl;
     int choice;
-    cout << "1. Make Payment\n2. User Profile\n3. Conference Details\n4. Logout" << endl;
+    cout << "1. Registered Conferences\n2. User Profile\n3. All Conference Details\n4. Make Payment\n5. Logout" << endl;
     cin >> choice;
     switch (choice) {
         case 1: {
-            return VIEW_CHOICES(PAYMENT);
+            current_user->show_registered_conference_list();
+            return VIEW_CHOICES (USER_DASHBOARD);
         }
         case 2: {
             return VIEW_CHOICES(PROFILE);
@@ -139,6 +140,9 @@ VIEW_CHOICES UserDashboardView::display() {
             return VIEW_CHOICES(DETAIL);
         }
         case 4: {
+            return VIEW_CHOICES(PAYMENT);
+        }
+        case 5: {
             return VIEW_CHOICES(SPLASH);
         }
         default: {
@@ -224,51 +228,21 @@ VIEW_CHOICES ProfileView::display() {
 }
 
 VIEW_CHOICES PaymentView::display() {
-    if (/*current_user->is_payment_done()*/0) {
-        cout << "Your payment is done" << endl;
-        return VIEW_CHOICES (USER_DASHBOARD);
-    }
-    else{
-        selectPaymentType:
-        cout<<"Select Registration type\n1. Normal\n2. VIP"<<endl;
-        int r_type;
-        cin>>r_type;
-        switch (r_type) {
-            case 1: {
-                cout << "You have to pay " << Payment::get_payment_amount("Normal");
-                break;
-            }
-            case 2: {
-                cout << "You have to pay " << Payment::get_payment_amount("VIP");
-                break;
-            }
-            default: {
-                cout << "Invalid Choice" << endl;
-                goto selectPaymentType;
-            }
-        }
-       cout<<"Do you wanna make payment(Y/N)"<<endl;
-        char response;
-        cin>>response;
-        if(response == 'Y'){
-            cout<<"Your payment is successfully received"<<endl;
-            /*current_user->make_payment();*/
-            return VIEW_CHOICES (USER_DASHBOARD);
-        }
-        else{
-            return VIEW_CHOICES (USER_DASHBOARD);
-        }
-    }
+    current_user->registered_conference_list_payment();
+
 }
 
 VIEW_CHOICES ConferenceDetailView::display() {
-    cout << "Conference Detail view\n\n";
-    cout << "Name: \t\t\t\t\t\t" << conference->get_c_name() << endl;
-    cout << "Date: \t\t\t\t\t\t" << conference->get_c_date() << endl;
-    cout << "Time: \t\t\t\t\t\t" << conference->get_c_time() << endl;
-    cout << "Venue: \t\t\t\t\t\t" << conference->get_c_venue() << endl;
-    cout << "Current Seat Availability: \t" << conference->get_seats_available() << "\n\n";
-    if(current_user == nullptr) {
+    cout << "Conference Detail View\n\n";
+    for(auto &it : Conference::conference_list()){
+        cout << "Name: \t\t\t\t\t\t" << it.second.get_c_name() << endl;
+        cout << "Date: \t\t\t\t\t\t" << it.second.get_c_date() << endl;
+        cout << "Time: \t\t\t\t\t\t" << it.second.get_c_time() << endl;
+        cout << "Venue: \t\t\t\t\t\t" << it.second.get_c_venue() << endl;
+        cout << "Current Seat Availability: \t" << it.second.get_seats_available() << "\n\n";
+    }
+    cout << "\n\n";
+    if(current_user->get_username().empty()) {
         return VIEW_CHOICES(SPLASH);
     }
     else if(current_user->is_superuser()) {

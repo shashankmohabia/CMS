@@ -127,3 +127,11 @@ int Conference::give_total_number_of_pending_registrations() {
 int Conference::give_total_number_of_attendees() {
     return static_cast<int>(_payment_done_list.size());
 }
+
+map<string, Conference> &Conference::conference_list() {
+    return _conference_list;
+}
+
+Payment Conference::payment_details() {
+    return _payment_details;
+}

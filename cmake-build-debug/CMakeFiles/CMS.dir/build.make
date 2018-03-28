@@ -105,33 +105,9 @@ CMakeFiles/CMS.dir/Src/Init.cpp.o.provides: CMakeFiles/CMS.dir/Src/Init.cpp.o.re
 CMakeFiles/CMS.dir/Src/Init.cpp.o.provides.build: CMakeFiles/CMS.dir/Src/Init.cpp.o
 
 
-CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o: CMakeFiles/CMS.dir/flags.make
-CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o: ../Src/Registration/Registration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o -c /home/lakshya/CLionProjects/CMS/Src/Registration/Registration.cpp
-
-CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lakshya/CLionProjects/CMS/Src/Registration/Registration.cpp > CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.i
-
-CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lakshya/CLionProjects/CMS/Src/Registration/Registration.cpp -o CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.s
-
-CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o.requires:
-
-.PHONY : CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o.requires
-
-CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o.provides: CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o.requires
-	$(MAKE) -f CMakeFiles/CMS.dir/build.make CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o.provides.build
-.PHONY : CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o.provides
-
-CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o.provides.build: CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o
-
-
 CMakeFiles/CMS.dir/Src/Auth/User.cpp.o: CMakeFiles/CMS.dir/flags.make
 CMakeFiles/CMS.dir/Src/Auth/User.cpp.o: ../Src/Auth/User.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CMS.dir/Src/Auth/User.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CMS.dir/Src/Auth/User.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CMS.dir/Src/Auth/User.cpp.o -c /home/lakshya/CLionProjects/CMS/Src/Auth/User.cpp
 
 CMakeFiles/CMS.dir/Src/Auth/User.cpp.i: cmake_force
@@ -155,7 +131,7 @@ CMakeFiles/CMS.dir/Src/Auth/User.cpp.o.provides.build: CMakeFiles/CMS.dir/Src/Au
 
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o: CMakeFiles/CMS.dir/flags.make
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o: ../Src/Conference\ Details/Conference.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o -c "/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp"
 
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o.provides.build: CMake
 
 CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o: CMakeFiles/CMS.dir/flags.make
 CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o: ../Src/Registration/Payment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o -c /home/lakshya/CLionProjects/CMS/Src/Registration/Payment.cpp
 
 CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.i: cmake_force
@@ -203,7 +179,7 @@ CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o.provides.build: CMakeFiles/CMS
 
 CMakeFiles/CMS.dir/Src/View/Views.cpp.o: CMakeFiles/CMS.dir/flags.make
 CMakeFiles/CMS.dir/Src/View/Views.cpp.o: ../Src/View/Views.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CMS.dir/Src/View/Views.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CMS.dir/Src/View/Views.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CMS.dir/Src/View/Views.cpp.o -c /home/lakshya/CLionProjects/CMS/Src/View/Views.cpp
 
 CMakeFiles/CMS.dir/Src/View/Views.cpp.i: cmake_force
@@ -227,7 +203,7 @@ CMakeFiles/CMS.dir/Src/View/Views.cpp.o.provides.build: CMakeFiles/CMS.dir/Src/V
 
 CMakeFiles/CMS.dir/Src/View/Menu.cpp.o: CMakeFiles/CMS.dir/flags.make
 CMakeFiles/CMS.dir/Src/View/Menu.cpp.o: ../Src/View/Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CMS.dir/Src/View/Menu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CMS.dir/Src/View/Menu.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CMS.dir/Src/View/Menu.cpp.o -c /home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp
 
 CMakeFiles/CMS.dir/Src/View/Menu.cpp.i: cmake_force
@@ -253,7 +229,6 @@ CMakeFiles/CMS.dir/Src/View/Menu.cpp.o.provides.build: CMakeFiles/CMS.dir/Src/Vi
 CMS_OBJECTS = \
 "CMakeFiles/CMS.dir/Src/main.cpp.o" \
 "CMakeFiles/CMS.dir/Src/Init.cpp.o" \
-"CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o" \
 "CMakeFiles/CMS.dir/Src/Auth/User.cpp.o" \
 "CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o" \
 "CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o" \
@@ -265,7 +240,6 @@ CMS_EXTERNAL_OBJECTS =
 
 CMS: CMakeFiles/CMS.dir/Src/main.cpp.o
 CMS: CMakeFiles/CMS.dir/Src/Init.cpp.o
-CMS: CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o
 CMS: CMakeFiles/CMS.dir/Src/Auth/User.cpp.o
 CMS: CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o
 CMS: CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o
@@ -273,7 +247,7 @@ CMS: CMakeFiles/CMS.dir/Src/View/Views.cpp.o
 CMS: CMakeFiles/CMS.dir/Src/View/Menu.cpp.o
 CMS: CMakeFiles/CMS.dir/build.make
 CMS: CMakeFiles/CMS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CMS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable CMS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CMS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -283,7 +257,6 @@ CMakeFiles/CMS.dir/build: CMS
 
 CMakeFiles/CMS.dir/requires: CMakeFiles/CMS.dir/Src/main.cpp.o.requires
 CMakeFiles/CMS.dir/requires: CMakeFiles/CMS.dir/Src/Init.cpp.o.requires
-CMakeFiles/CMS.dir/requires: CMakeFiles/CMS.dir/Src/Registration/Registration.cpp.o.requires
 CMakeFiles/CMS.dir/requires: CMakeFiles/CMS.dir/Src/Auth/User.cpp.o.requires
 CMakeFiles/CMS.dir/requires: CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o.requires
 CMakeFiles/CMS.dir/requires: CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o.requires

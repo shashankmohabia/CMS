@@ -9,7 +9,10 @@ Init::Init() {
     // Dummy Data
     User user("Lakshya", "Garg", "lakshyagarg", "lakshyagarg", "garg.2@iitj.ac.in", "8283875162", "13022018", "316, B1",
               "Jodhpur", "Rajasthan", "India", "342037", 'M');
-    conference = new Conference("IEEE", "2 oct", "Jaipur", "12:12 pm");
+    conference = new Conference("IEEE", "2 oct", "Jaipur", "12:12 PM");
+    conference->update_seat_available(20);
+    Conference *conference1 = new Conference("CON1", "6 Sep", "Chandigarh", " 6:09 PM");
+    conference1-> update_seat_available(69);
     //cout << user.is_superuser();
     user.save();
 }
