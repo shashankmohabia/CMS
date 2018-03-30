@@ -11,7 +11,6 @@
 #include "../Auth/User.h"
 #include "../Conference Details/Conference.h"
 #include "../Registration/Payment.h"
-#include "../Registration/Registration.h"
 
 using namespace std;
 

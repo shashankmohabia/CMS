@@ -21,6 +21,8 @@ map
 -
 vector
 -
+../Conference Details/Conference.h
+/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
 
 /home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp
 Conference.h
@@ -35,6 +37,8 @@ map
 -
 vector
 -
+algorithm
+-
 ../Registration/Payment.h
 /home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
 
@@ -45,8 +49,6 @@ Init.h
 /home/lakshya/CLionProjects/CMS/Src/Init.h
 Auth/User.h
 /home/lakshya/CLionProjects/CMS/Src/Auth/User.h
-Registration/Registration.h
-/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h
 View/Menu.h
 /home/lakshya/CLionProjects/CMS/Src/View/Menu.h
 Conference Details/Conference.h
@@ -65,20 +67,6 @@ string
 -
 map
 -
-
-/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.cpp
-Registration.h
-/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h
-
-/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h
-iostream
--
-string
--
-map
--
-../Auth/User.h
-/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
 
 /home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp
 Menu.h
@@ -105,8 +93,6 @@ chrono
 /home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
 ../Registration/Payment.h
 /home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
-../Registration/Registration.h
-/home/lakshya/CLionProjects/CMS/Src/Registration/Registration.h
 
 /home/lakshya/CLionProjects/CMS/Src/main.cpp
 iostream

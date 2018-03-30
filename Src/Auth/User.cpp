@@ -36,7 +36,7 @@ bool User::check_password(string password) {
 }
 
 bool User::is_payment_done(string conference_name) {
-
+    Conference::conference_list().find(conference_name)->second.get_user_payment_status(this->get_username());
 }
 
 bool User::is_superuser() {
@@ -76,8 +76,8 @@ void User::show_user_details() {
     cout << "\nState: " << _state;
     cout << "\nCountry: " << _country;
     cout << "\nPincode: " << _pincode;
-    cout << "\nGender" << _gender;
-    cout << "\nSuperuser Status" << _superuser_status <<"\n\n";
+    cout << "\nGender: " << _gender;
+    cout << "\nSuperuser Status: " << _superuser_status <<"\n\n";
 }
 
 void User::create_superuser(string username) {
@@ -171,12 +171,12 @@ User::User(string first_name, string last_name, string username, string password
 }
 
 void User::update_registered_conference_list(string conference, string type) {
-    for(int i=0; i<registered_conference_list.size(); i++){
-        if(registered_conference_list[i].first == conference){
+    for(int i = 0; i <_registered_conference_list.size(); i++){
+        if(_registered_conference_list[i].first == conference){
             UserError("You are already registered for the conference!");
         }
         else{
-            registered_conference_list.push_back(pair<string, string>(conference, type));
+            _registered_conference_list.emplace_back(conference, type);
         }
     }
 }
@@ -187,6 +187,48 @@ void User::create_superuser() {
 
 void User::remove_superuser() {
     _superuser_status = false;
+}
+
+void User::show_registered_conference_list() {
+    if(_registered_conference_list.empty()){
+        cout << "Not registered for any conferences!\n";
+    }
+    else {
+        for (auto &i : _registered_conference_list) {
+            cout << i.first << "\t" << i.second << endl;
+        }
+    }
+}
+
+void User::registered_conference_list_payment() {
+    if(_registered_conference_list.empty()){
+        cout << "Not registered for any conferences!\n";
+    }
+    else {
+        for(int i = 0; i < _registered_conference_list.size(); i++){
+            cout << i+1 << "\t" << _registered_conference_list[i].first << "\t" << _registered_conference_list[i].second << endl;
+        }
+        cout << "\nPlease enter the number of the conference for which you want to pay!\n";
+        int choice;
+        cin >> choice;
+        if(choice > 0 && choice <= _registered_conference_list.size()){
+            cout << "The amount to be paid is Rs. " <<  Conference::conference_list().find(_registered_conference_list[choice].first)->second.payment_details().get_payment_amount(_registered_conference_list[choice].second);
+            cout << "\nDo you really want to pay?\nPress Y to pay!\n";
+            char a;
+            cin >> a;
+            if(a == 'Y') {
+                Conference::conference_list().find(_registered_conference_list[choice].first)->second.make_payment(
+                        this->get_username());
+                cout << "Payment Successful\n";
+            }
+            else {
+                //Error
+            }
+        }
+        else{
+            //Error
+        }
+    }
 }
 
 UserError::UserError(const string& err) {
