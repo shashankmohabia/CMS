@@ -130,7 +130,7 @@ VIEW_CHOICES UserDashboardView::display() {
     cout << "What do you want to do!" << endl;
     int choice;
     cout
-            << "1. Registered Conferences\n2. User Profile\n3. All Conference Details\n4. Register for a Conference\n5. Make Payment\n6. Logout"
+            << "1. Registered Conferences\n2. User Profile\n3. All Conference Details\n4. Register for a Conference\n5. Make Payment\n6.Change Password\n7. Logout"
             << endl;
     cin >> choice;
     switch (choice) {
@@ -191,6 +191,27 @@ VIEW_CHOICES UserDashboardView::display() {
             return VIEW_CHOICES(PAYMENT);
         }
         case 6: {
+            string password, new_password, re_enter_password;
+            cout << "Enter Previous Password: ";
+            cin >> password;
+            if (current_user->get_password() == password) {
+                cout << "Enter New Password: ";
+                cin >> new_password;
+                cout << "Re-enter New Password: ";
+                cin >> re_enter_password;
+                if (new_password == re_enter_password) {
+                    current_user->set_password(new_password);
+                    current_user->save();
+                }
+                else {
+                    //Error
+                }
+            }
+            else {
+                //Error
+            }
+        }
+        case 7: {
             return VIEW_CHOICES(SPLASH);
         }
         default: {
@@ -206,7 +227,7 @@ VIEW_CHOICES AdminDashboardView::display() {
     cout << "What do you want to do!" << endl;
     int choice;
     cout
-            << "1. User Profile\n2. Conference Details\n3. Registered Data\n4. Update Conference Details\n5. Make Superuser\n6. Remove Superuser\n7. Remove User\n8. Modify User Details\n9. Logout"
+            << "1. User Profile\n2. Conference Details\n3. Registered Data\n4. Update Conference Details\n5. Make Superuser\n6. Remove Superuser\n7. Remove User\n8. Logout"
             << endl;
     cin >> choice;
     switch (choice) {
@@ -220,9 +241,58 @@ VIEW_CHOICES AdminDashboardView::display() {
             return VIEW_CHOICES(REGISTER_DETAILS);
         }
         case 4: {
-            //return VIEW_CHOICES();
+            cout << "Please enter the name of the conference you want to update from the following!\n";
+            for (auto &i : Conference::conference_list()) {
+                cout << i.first << "\n";
+            }
+            string c_name;
+            cin >> c_name;
+            if (Conference::conference_list().find(c_name) != Conference::conference_list().end()) {
+                cout << "Choose the detail to edit!\n";
+                cout << "1. Name\n2. Date\n3. Time\n4. Venue\n";
+                int i;
+                cin >> i;
+                switch (i) {
+                    case 1: {
+                        cout << "Enter the new name of the Conference: ";
+                        string new_c_name;
+                        cin >> new_c_name;
+                        Conference::conference_list().find(c_name)->second.update_c_name(new_c_name);
+                        break;
+                    }
+                    case 2: {
+                        cout << "Enter the new date of the Conference: ";
+                        string new_c_date;
+                        cin >> new_c_date;
+                        Conference::conference_list().find(c_name)->second.update_c_date(new_c_date);
+                        break;
+                    }
+                    case 3: {
+                        cout << "Enter the new time of the Conference: ";
+                        string new_c_time;
+                        cin >> new_c_time;
+                        Conference::conference_list().find(c_name)->second.update_c_time(new_c_time);
+                        break;
+                    }
+                    case 4: {
+                        cout << "Enter the new venue of the Conference: ";
+                        string new_c_venue;
+                        cin >> new_c_venue;
+                        Conference::conference_list().find(c_name)->second.update_c_venue(new_c_venue);
+                        break;
+                    }
+                    default: {
+                        //Error
+                        break;
+                    }
+                }
+            }
+            else {
+                //Error
+            }
         }
         case 5: {
+            cout << "Please enter the name of the user to grant superuser access: ";
             string username;
             cin >> username;
             auto user = User::all().find(username);
@@ -235,10 +305,12 @@ VIEW_CHOICES AdminDashboardView::display() {
                 }
             }
             else {
-                UserError("User doesn't exists");
+                UserError("User doesn't exists!");
             }
+            return ADMIN_DASHBOARD;
         }
         case 6: {
+            cout << "Please enter the name of the user to revoke superuser access: ";
             string username;
             cin >> username;
             auto user = User::all().find(username);
@@ -255,10 +327,19 @@ VIEW_CHOICES AdminDashboardView::display() {
             }
         }
         case 7: {
-
+            cout << "Please enter the name of the user to be removed: ";
+            string username;
+            cin >> username;
+            auto user = User::all().find(username);
+            if (user != User::all().end()) {
+                User::all().erase(user);
+            }
+            else {
+                UserError("User doesn't exists");
+            }
         }
         case 8: {
-
+            return SPLASH;
         }
         default: {
             cout << "Please select a valid option" << endl;
@@ -310,49 +391,53 @@ VIEW_CHOICES RegisterDetailView::display() {
         return VIEW_CHOICES(USER_DASHBOARD);
     }
     cout << "Registration Detail View\n\n";
-    /*cout << "Total Number of Admins = " << Registration::give_total_number_of_admins() << endl;
-    cout << "Total Number of Registrations = " << Registration::give_total_number_of_registrations() << endl;
-    cout << "Total Number of Pending Registrations = " << Registration::give_total_number_of_pending_registrations() << endl;
-    cout << "Total Number of Authorized Registrations = " << Registration::give_total_number_of_authorised_registrations() << endl;
-    */cout << "\nChoose any one of the options\n";
-    cout
-            << "1. Show Authenticated User List\n2. Show Registered User List\n3. Show Pending Payment User List\n4. Show Registration Type List\n5. Show Admin List\n6. Update Registration List\n7. Update Admin List\nEnter any other number to go back to the Dashboard\n";
-    int choice;
-    cin >> choice;
-    switch (choice) {
-        case 1: {
-            /*Registration::show_authenticated_user_list();*/
-            break;
+    cout << "Enter the name of conference to view registration details\n";
+    for (auto &i : Conference::conference_list()) {
+        cout << i.first << "\n";
+    }
+    string c_name;
+    cin >> c_name;
+    if (Conference::conference_list().find(c_name) != Conference::conference_list().end()) {
+        auto conference = Conference::conference_list().find(c_name)->second;
+        cout << "Total Number of Registrations = " << conference.give_total_number_of_registrations() << endl;
+        cout << "Total Number of Pending Registrations = " << conference.give_total_number_of_pending_registrations()
+             << endl;
+        cout << "Total Number of Authorized Registrations = " << conference.give_total_number_of_attendees() << endl;
+        cout << "\nChoose any one of the options\n";
+        show:
+        cout << "1. Show Final Attendee List\n2. Show Registered User List\n3. Show Pending Payment User List\n"
+             << "4. Show Registration Type List\nEnter any other number to go back to the Dashboard\n";
+        int choice;
+        cin >> choice;
+        switch (choice) {
+            case 1: {
+                conference.show_final_attendee_list();
+                goto show;
+            }
+            case 2: {
+                conference.show_registration_list();
+                goto show;
+            }
+            case 3: {
+                conference.show_pending_payment_user_list();
+                goto show;
+            }
+            /*case 4: {
+                cout << "\nEnter the type of list\n";
+                string r_type;
+                cin >> r_type;
+                for(auto &i : conference.payment_details().get_registration_type_list()){
+                    cout << i.first << "\t" << i.second << "\n";
+                }
+                goto show;
+            }*/
+            default: {
+                return VIEW_CHOICES(ADMIN_DASHBOARD);
+            }
         }
-        case 2: {
-            /*Registration::show_registered_user_list();*/
-            break;
-        }
-        case 3: {
-            /*Registration::show_pending_payment_user_list();*/
-            break;
-        }
-        case 4: {
-            cout << "\nEnter the type of list\n";
-            string r_type;
-            cin >> r_type;
-            /*Registration::show_registration_type_list(r_type);*/
-            break;
-        }
-        case 5: {
-            /*Registration::show_admin_list();*/
-            break;
-        }
-        case 6: {
-            /*Registration::update_registration_list();*/
-            break;
-        }
-        case 7: {
-            /*Registration::update_admin_list();*/
-        }
-        default: {
-            return VIEW_CHOICES(ADMIN_DASHBOARD);
-        }
+    }
+    else {
+        //Error
     }
     return VIEW_CHOICES(REGISTER_DETAILS);
 }
