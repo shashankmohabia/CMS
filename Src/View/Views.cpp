@@ -59,11 +59,13 @@ VIEW_CHOICES LoginView::display() {
             }
         }
         else {
-            UserError("The password is incorrect!");
+            UserError error = UserError("The password is incorrect!");
+            cout<<error.print_error()<<endl;
         }
     }
     else {
-        UserError("Username doesn't exist");
+        UserError error = UserError("User doesn't exists!");
+        cout<<error.print_error()<<endl;
     }
     return VIEW_CHOICES(LOGIN);
 }
@@ -379,6 +381,7 @@ VIEW_CHOICES ConferenceDetailView::display() {
     cout << "\n\n";
     if (current_user->get_username().empty()) {
         return VIEW_CHOICES(SPLASH);
+
     }
     else if (current_user->is_superuser()) {
         return VIEW_CHOICES(ADMIN_DASHBOARD);
