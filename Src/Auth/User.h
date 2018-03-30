@@ -8,6 +8,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include "../Conference Details/Conference.h"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ public:
 
 class User {
     static map<string, User> _user_list;
-    vector <pair<string, string> > registered_conference_list;                  //conference, type
+    vector <pair<string, string> > _registered_conference_list;                  //conference, type
     bool _superuser_status = false;
     string _first_name, _last_name, _username, _password, _email, _contact;
     string _date_of_registration, _address, _city, _state, _country, _pincode;
@@ -97,7 +98,11 @@ public:
 
     void set_gender(char _gender);
 
-    void update_registered_conference_list(string, string);     //conference_name, registeration_type
+    void update_registered_conference_list(string, string);     //conference_name, registration_type
+
+    void show_registered_conference_list();
+
+    void registered_conference_list_payment();
 
 };
 

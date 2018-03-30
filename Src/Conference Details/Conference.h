@@ -9,6 +9,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <algorithm>
 #include "../Registration/Payment.h"
 
 using namespace std;
@@ -16,12 +17,12 @@ using namespace std;
 
 class Conference {
 private:
-    string _c_name, _c_date, _c_venue, _c_time, _c_schedule;
+    string _c_name, _c_date, _c_venue, _c_time;
     int _seats_available;
     Payment _payment_details;
     vector<string> _registration_list;
     vector<string> _payment_done_list;
-    /*map _conference_list*/
+    static map<string, Conference> _conference_list;
 public:
     Conference() = default;
 
@@ -39,17 +40,17 @@ public:
 
     void update_seat_available(int);
 
-    void update_c_name();
+    void update_c_name(string);
 
-    void update_c_date();
+    void update_c_date(string);
 
-    void update_c_time();
+    void update_c_time(string);
 
-    void update_c_venue();
+    void update_c_venue(string);
 
-    bool get_user_payment_status(string, string);   //c_name, username
+    bool get_user_payment_status(string);   //username
 
-    void make_payment(string, string);              //c_name, username
+    void make_payment(string);              //username
 
     void show_conference_details();
 
@@ -59,9 +60,9 @@ public:
 
     void show_pending_payment_user_list();
 
-    void show_registration_type_list();
+    void show_registration_type_list(string);   //r_type
 
-    void update_registration_list();
+    void update_registration_list(const string &);
 
     int give_total_number_of_registrations();
 
@@ -69,10 +70,14 @@ public:
 
     int give_total_number_of_attendees();
 
+    static map<string, Conference> &conference_list();
+
+    Payment payment_details();
+
 };
 
 
-extern Conference* conference;
+extern Conference *conference;
 
 
 #endif //CMS_CONFERENCE_H
