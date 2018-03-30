@@ -98,7 +98,7 @@ public:
 
     void set_gender(char _gender);
 
-    void update_registered_conference_list(string, string);     //conference_name, registeration_type
+    void update_registered_conference_list(string, string);     //conference_name, registration_type
 
     void show_registered_conference_list();
 

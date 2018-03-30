@@ -213,12 +213,13 @@ void User::registered_conference_list_payment() {
         cin >> choice;
         if(choice > 0 && choice <= _registered_conference_list.size()){
             cout << "The amount to be paid is Rs. " <<  Conference::conference_list().find(_registered_conference_list[choice].first)->second.payment_details().get_payment_amount(_registered_conference_list[choice].second);
-            cout << "\nPress [Y/N]\n";
+            cout << "\nDo you really want to pay?\nPress Y to pay!\n";
             char a;
             cin >> a;
             if(a == 'Y') {
                 Conference::conference_list().find(_registered_conference_list[choice].first)->second.make_payment(
                         this->get_username());
+                cout << "Payment Successful\n";
             }
             else {
                 //Error

@@ -5,7 +5,7 @@
 #include "Conference.h"
 
 
-Conference* conference = new Conference;
+Conference *conference = new Conference;
 
 map<string, Conference> Conference::_conference_list = {};
 
@@ -76,10 +76,9 @@ bool Conference::get_user_payment_status(string username) {
 }
 
 void Conference::make_payment(string username) {
-    if(find(_payment_done_list.begin(), _payment_done_list.end(), username) == _payment_done_list.end()){
+    if (find(_payment_done_list.begin(), _payment_done_list.end(), username) == _payment_done_list.end()) {
         _payment_done_list.push_back(username);
-    }
-    else{
+    } else {
         /*Error "You have already paid!";*/
     }
 }
@@ -101,7 +100,7 @@ void Conference::show_registration_list() {
 void Conference::show_pending_payment_user_list() {
     cout << "Pending Payment User List\n";
     for (const auto &i : _registration_list) {
-        if(find(_payment_done_list.begin(), _payment_done_list.end(), i) == _payment_done_list.end())
+        if (find(_payment_done_list.begin(), _payment_done_list.end(), i) == _payment_done_list.end())
             cout << i << endl;
     }
 }
@@ -112,8 +111,8 @@ void Conference::show_registration_type_list(string r_type) {
     }
 }
 
-void Conference::update_registration_list() {
-
+void Conference::update_registration_list(const string &username) {
+    _registration_list.push_back(username);
 }
 
 int Conference::give_total_number_of_registrations() {

@@ -62,7 +62,7 @@ public:
 
     void show_registration_type_list(string);   //r_type
 
-    void update_registration_list();
+    void update_registration_list(const string &);
 
     int give_total_number_of_registrations();
 
@@ -70,14 +70,14 @@ public:
 
     int give_total_number_of_attendees();
 
-    static map<string, Conference>& conference_list();
+    static map<string, Conference> &conference_list();
 
     Payment payment_details();
 
 };
 
 
-extern Conference* conference;
+extern Conference *conference;
 
 
 #endif //CMS_CONFERENCE_H
