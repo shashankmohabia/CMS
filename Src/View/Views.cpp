@@ -226,9 +226,9 @@ VIEW_CHOICES AdminDashboardView::display() {
     user_dashboard:
     cout << "What do you want to do!" << endl;
     int choice;
-    cout
-            << "1. User Profile\n2. Conference Details\n3. Registered Data\n4. Update Conference Details\n5. Make Superuser\n6. Remove Superuser\n7. Remove User\n8. Logout"
-            << endl;
+    cout << "1. User Profile\n2. Conference Details\n3. Registered Data\n4.Create Conference\n"
+         << "5. Update Conference Details\n6. Make Superuser\n7. Remove Superuser\n8. Remove User\n9. Logout"
+         << endl;
     cin >> choice;
     switch (choice) {
         case 1: {
@@ -241,6 +241,9 @@ VIEW_CHOICES AdminDashboardView::display() {
             return VIEW_CHOICES(REGISTER_DETAILS);
         }
         case 4: {
+
+        }
+        case 5: {
             cout << "Please enter the name of the conference you want to update from the following!\n";
             for (auto &i : Conference::conference_list()) {
                 cout << i.first << "\n";
@@ -291,7 +294,7 @@ VIEW_CHOICES AdminDashboardView::display() {
                 //Error
             }
         }
-        case 5: {
+        case 6: {
             cout << "Please enter the name of the user to grant superuser access: ";
             string username;
             cin >> username;
@@ -309,7 +312,7 @@ VIEW_CHOICES AdminDashboardView::display() {
             }
             return ADMIN_DASHBOARD;
         }
-        case 6: {
+        case 7: {
             cout << "Please enter the name of the user to revoke superuser access: ";
             string username;
             cin >> username;
@@ -326,7 +329,7 @@ VIEW_CHOICES AdminDashboardView::display() {
                 UserError("User doesn't exists");
             }
         }
-        case 7: {
+        case 8: {
             cout << "Please enter the name of the user to be removed: ";
             string username;
             cin >> username;
@@ -338,7 +341,7 @@ VIEW_CHOICES AdminDashboardView::display() {
                 UserError("User doesn't exists");
             }
         }
-        case 8: {
+        case 9: {
             return SPLASH;
         }
         default: {
@@ -422,15 +425,15 @@ VIEW_CHOICES RegisterDetailView::display() {
                 conference.show_pending_payment_user_list();
                 goto show;
             }
-            /*case 4: {
-                cout << "\nEnter the type of list\n";
-                string r_type;
-                cin >> r_type;
-                for(auto &i : conference.payment_details().get_registration_type_list()){
-                    cout << i.first << "\t" << i.second << "\n";
-                }
-                goto show;
-            }*/
+                /*case 4: {
+                    cout << "\nEnter the type of list\n";
+                    string r_type;
+                    cin >> r_type;
+                    for(auto &i : conference.payment_details().get_registration_type_list()){
+                        cout << i.first << "\t" << i.second << "\n";
+                    }
+                    goto show;
+                }*/
             default: {
                 return VIEW_CHOICES(ADMIN_DASHBOARD);
             }
