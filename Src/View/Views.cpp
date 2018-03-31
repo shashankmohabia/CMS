@@ -4,6 +4,49 @@
 
 #include "Views.h"
 
+#define system_pause {                                          \
+            cout << "Press Enter to continue!\n";               \
+            cin.ignore(numeric_limits<streamsize>::max(),'\n'); \
+        }
+
+#define cin_space(var) {                                                    \
+            getline(cin, var);                                              \
+        }
+
+#define cin_no_space(var) {                                                 \
+            getline(cin, var);                                              \
+            while((var).find(' ') != std::string::npos){                    \
+                cout << "Spaces are not allowed!\nPlease enter again: ";    \
+                getline(cin, var);                                          \
+            }                                                               \
+        }
+
+#define cin_email(var) {                                                    \
+            getline(cin,var);                                               \
+            while((var).find(" ") != std::string::npos){                    \
+                cout << "Spaces are not allowed!\nPlease enter again: ";    \
+                getline(cin, var);                                          \
+            }                                                               \
+            size_t foundat = (var).find("@");                               \
+            size_t founddot = (var).find(".", foundat + 1);                 \
+            while(foundat == 0 || foundat == std::string::npos || founddot == std::string::npos || founddot == (var).size() - 1){ \
+                cout << "Enter a valid e-mail id: ";                        \
+                getline(cin,var);                                           \
+            }                                                               \
+        }
+
+#define cin_int(var, len) {                                                 \
+            getline(cin,var);                                               \
+            while((var).find(" ") != std::string::npos){                    \
+                cout << "Spaces are not allowed!\nPlease enter again: ";    \
+                getline(cin, var);                                          \
+            }                                                               \
+            while((var).size() != (len) || ((var).find_first_not_of( "0123456789" ) != string::npos)){    \
+                cout << "Enter a valid mobile number: ";                    \
+                getline(cin,var);                                           \
+            }                                                               \
+        }
+
 
 VIEW_CHOICES Views::display() {
 }
@@ -14,6 +57,7 @@ VIEW_CHOICES SplashView::display() {
     int choice;
     cout << "1. Login\n2. Register\n3. Details\n4. Exit" << endl;
     cin >> choice;
+    cin.ignore();
     switch (choice) {
         case 1: {
             return VIEW_CHOICES(LOGIN);
@@ -39,12 +83,12 @@ VIEW_CHOICES LoginView::display() {
     cout << "Login view" << endl;
     cout << "Enter Username or type '$' to return to main menu " << endl;
     string username, password;
-    cin >> username;
+    cin_no_space(username);
     if (username == "$") {
         return VIEW_CHOICES(SPLASH);
     }
     cout << "Enter Password" << endl;
-    cin >> password;
+    cin_space(password);
     auto user = User::all().find(username);
     if (user != User::all().end()) {
         if (user->second.check_password(password)) {
@@ -60,62 +104,66 @@ VIEW_CHOICES LoginView::display() {
         }
         else {
             UserError error = UserError("The password is incorrect!");
-            cout<<error.print_error()<<endl;
+            cout << error.print_error() << endl;
         }
     }
     else {
         UserError error = UserError("User doesn't exists!");
-        cout<<error.print_error()<<endl;
+        cout << error.print_error() << endl;
     }
+    system_pause
     return VIEW_CHOICES(LOGIN);
 }
 
 VIEW_CHOICES RegisterView::display() {
-    if (!conference->get_seats_available()) {
-        cout << "Registrations are closed!" << endl;
-        //cout << "Press any key to go back to menu screen" << endl;
-        return VIEW_CHOICES(SPLASH);
-    }
     cout << "Enter Register view" << endl;
     string firstName, lastName, username, password, rpassword, email, contact;
     string address, city, state, country, pincode;
     char gender;
     username_exists :
     cout << "Enter Username: ";
-    cin >> username;
+    cin_no_space(username);
     if (User::all().find(username) != User::all().end()) {
-        UserError("This Username already exists!");
+        UserError error = UserError("This Username already exists!");
+        cout << error.print_error() << endl;
         goto username_exists;
     }
+    /*cout << username << endl;*/
     cout << "Enter First name: ";
-    cin >> firstName;
+    cin_no_space(firstName);
+    /*cout << firstName << endl;*/
     cout << "Enter Last name: ";
-    cin >> lastName;
-    cout << "Enter Gender: ";
+    cin_no_space(lastName);
+    /*cout << lastName << endl;*/
+    cout << "Enter Gender[M/F/O]: ";
     cin >> gender;
+    cin.ignore();
     wrong_password :
     cout << "Enter Password: ";
-    cin >> password;
+    cin_space(password);
     cout << "Re-enter Password: ";
-    cin >> rpassword;
+    cin_space(rpassword);
     if (password != rpassword) {
-        UserError give_me_a_name("Both the passwords do not match!");
+        UserError error = UserError("Both the passwords do not match!");
+        cout << error.print_error() << endl;
         goto wrong_password;
     }
-    cout << "Enter E-mail";
-    cin >> email;
-    cout << "Enter Contact";
-    cin >> contact;
-    cout << "Enter Address";
-    cin >> address;
-    cout << "Enter City";
-    cin >> city;
-    cout << "Enter State";
-    cin >> state;
-    cout << "Enter Country";
-    cin >> country;
-    cout << "Enter Pincode";
-    cin >> pincode;
+    cout << "Enter E-mail: ";
+    cin_email(email);
+    /*cin >> email;
+    cin.ignore();*/
+    cout << "Enter Mobile No.(10 Digits): ";
+    cin_int(contact, 10);
+    cout << "Enter Address: ";
+    cin_space(address);
+    cout << "Enter City: ";
+    cin_space(city);
+    cout << "Enter State: ";
+    cin_space(state);
+    cout << "Enter Country: ";
+    cin_space(country);
+    cout << "Enter Pincode: ";
+    cin_int(pincode, 6);
     auto dor = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     User user(firstName, lastName, username, password, email, contact, std::ctime(&dor), address,
               city, state, country, pincode, gender);
@@ -135,6 +183,7 @@ VIEW_CHOICES UserDashboardView::display() {
             << "1. Registered Conferences\n2. User Profile\n3. All Conference Details\n4. Register for a Conference\n5. Make Payment\n6.Change Password\n7. Logout"
             << endl;
     cin >> choice;
+    cin.ignore();
     switch (choice) {
         case 1: {
             current_user->show_registered_conference_list();
@@ -147,13 +196,16 @@ VIEW_CHOICES UserDashboardView::display() {
             return VIEW_CHOICES(DETAIL);
         }
         case 4: {
+            enter_name:
             cout << "Please enter the name of the conference you want to register for from the following!\n";
             for (auto &i : Conference::conference_list()) {
                 cout << i.first << "\n";
             }
             string c_name;
             cin >> c_name;
+            cin.ignore();
             if (Conference::conference_list().find(c_name) != Conference::conference_list().end()) {
+                enter_type :
                 cout << "Select the type of registration!\n";
                 for (auto &i : Conference::conference_list().find(
                         c_name)->second.payment_details().get_registration_type_list()) {
@@ -161,6 +213,7 @@ VIEW_CHOICES UserDashboardView::display() {
                 }
                 string c_type;
                 cin >> c_type;
+                cin.ignore();
                 if (Conference::conference_list().find(
                         c_name)->second.payment_details().get_registration_type_list().find(c_type) !=
                     Conference::conference_list().find(
@@ -168,10 +221,11 @@ VIEW_CHOICES UserDashboardView::display() {
                     cout << "Do you really want to pay Rs " << Conference::conference_list().find(
                             c_name)->second.payment_details().get_registration_type_list().find(c_type)->second;
                     cout << "\nPress Y to continue.\n";
-                    int flag;
+                    char flag;
                     cin >> flag;
+                    cin.ignore();
                     if (flag != 'Y') {
-                        //Error
+                        cout << "You have not been registered for the conference!\n";
                     }
                     else {
                         current_user->update_registered_conference_list(c_name, c_type);
@@ -181,11 +235,33 @@ VIEW_CHOICES UserDashboardView::display() {
                     }
                 }
                 else {
-                    //Error
+                    UserError error = UserError("The conference type entered doesn't exist!");
+                    cout << error.print_error() << endl;
+                    cout << "Press Y to re-enter the conference type: ";
+                    char flag;
+                    cin >> flag;
+                    cin.ignore();
+                    if (flag == 'Y') {
+                        goto enter_type;
+                    }
+                    else {
+                        cout << "You have not been registered for the conference!\n";
+                    }
                 }
             }
             else {
-                //Error
+                UserError error = UserError("The conference name entered doesn't exist!");
+                cout << error.print_error() << endl;
+                cout << "Press Y to re-enter the conference name: ";
+                char flag;
+                cin >> flag;
+                cin.ignore();
+                if (flag == 'Y') {
+                    goto enter_name;
+                }
+                else {
+                    cout << "You have not been registered for the conference!\n";
+                }
             }
             return USER_DASHBOARD;
         }
@@ -194,23 +270,32 @@ VIEW_CHOICES UserDashboardView::display() {
         }
         case 6: {
             string password, new_password, re_enter_password;
+            enter_password:
             cout << "Enter Previous Password: ";
             cin >> password;
+            cin.ignore();
             if (current_user->get_password() == password) {
+                enter_new_password:
                 cout << "Enter New Password: ";
                 cin >> new_password;
+                cin.ignore();
                 cout << "Re-enter New Password: ";
                 cin >> re_enter_password;
+                cin.ignore();
                 if (new_password == re_enter_password) {
                     current_user->set_password(new_password);
                     current_user->save();
                 }
                 else {
-                    //Error
+                    UserError error = UserError("Both the passwords do not match!");
+                    cout << error.print_error() << endl;
+                    goto enter_new_password;
                 }
             }
             else {
-                //Error
+                UserError error = UserError("Entered password is wrong!");
+                cout << error.print_error() << endl;
+                goto enter_password;
             }
         }
         case 7: {
@@ -225,13 +310,14 @@ VIEW_CHOICES UserDashboardView::display() {
 
 VIEW_CHOICES AdminDashboardView::display() {
     cout << "Hi " << current_user->get_full_name() << endl;
-    user_dashboard:
+    admin_dashboard:
     cout << "What do you want to do!" << endl;
     int choice;
-    cout << "1. User Profile\n2. Conference Details\n3. Registered Data\n4.Create Conference\n"
+    cout << "1. User Profile\n2. Conference Details\n3. Registered Data\n4. Create Conference\n"
          << "5. Update Conference Details\n6. Make Superuser\n7. Remove Superuser\n8. Remove User\n9. Logout"
          << endl;
     cin >> choice;
+    cin.ignore();
     switch (choice) {
         case 1: {
             return VIEW_CHOICES(PROFILE);
@@ -243,7 +329,27 @@ VIEW_CHOICES AdminDashboardView::display() {
             return VIEW_CHOICES(REGISTER_DETAILS);
         }
         case 4: {
-
+            cout << "Enter the details of the conference you want to create!\n";
+            string name, date, venue, time;
+            int seats;
+            cout << "Name: ";
+            cin >> name;
+            cin.ignore();
+            cout << "Date: ";
+            cin >> date;
+            cin.ignore();
+            cout << "Venue: ";
+            cin >> venue;
+            cin.ignore();
+            cout << "Time: ";
+            cin >> time;
+            cin.ignore();
+            cout << "Number of available seats: ";
+            cin >> seats;
+            cin.ignore();
+            Conference(name, date, venue, time);
+            Conference::conference_list().find(name)->second.update_seat_available(seats);
+            cout << "Successfully registered for conference!\n";
         }
         case 5: {
             cout << "Please enter the name of the conference you want to update from the following!\n";
@@ -252,16 +358,19 @@ VIEW_CHOICES AdminDashboardView::display() {
             }
             string c_name;
             cin >> c_name;
+            cin.ignore();
             if (Conference::conference_list().find(c_name) != Conference::conference_list().end()) {
                 cout << "Choose the detail to edit!\n";
                 cout << "1. Name\n2. Date\n3. Time\n4. Venue\n";
                 int i;
                 cin >> i;
+                cin.ignore();
                 switch (i) {
                     case 1: {
                         cout << "Enter the new name of the Conference: ";
                         string new_c_name;
                         cin >> new_c_name;
+                        cin.ignore();
                         Conference::conference_list().find(c_name)->second.update_c_name(new_c_name);
                         break;
                     }
@@ -269,6 +378,7 @@ VIEW_CHOICES AdminDashboardView::display() {
                         cout << "Enter the new date of the Conference: ";
                         string new_c_date;
                         cin >> new_c_date;
+                        cin.ignore();
                         Conference::conference_list().find(c_name)->second.update_c_date(new_c_date);
                         break;
                     }
@@ -276,6 +386,7 @@ VIEW_CHOICES AdminDashboardView::display() {
                         cout << "Enter the new time of the Conference: ";
                         string new_c_time;
                         cin >> new_c_time;
+                        cin.ignore();
                         Conference::conference_list().find(c_name)->second.update_c_time(new_c_time);
                         break;
                     }
@@ -283,6 +394,7 @@ VIEW_CHOICES AdminDashboardView::display() {
                         cout << "Enter the new venue of the Conference: ";
                         string new_c_venue;
                         cin >> new_c_venue;
+                        cin.ignore();
                         Conference::conference_list().find(c_name)->second.update_c_venue(new_c_venue);
                         break;
                     }
@@ -300,28 +412,34 @@ VIEW_CHOICES AdminDashboardView::display() {
             cout << "Please enter the name of the user to grant superuser access: ";
             string username;
             cin >> username;
+            cin.ignore();
             auto user = User::all().find(username);
             if (user != User::all().end()) {
                 if (user->second.is_superuser()) {
-                    UserError("This user is already a superuser!");
+                    UserError error("This user is already a superuser!");
+                    cout << error.print_error() << endl;
                 }
                 else {
                     user->second.create_superuser(username);
                 }
             }
             else {
-                UserError("User doesn't exists!");
+                UserError error("User doesn't exists!");
+                cout << error.print_error() << endl;
             }
+            system_pause
             return ADMIN_DASHBOARD;
         }
         case 7: {
             cout << "Please enter the name of the user to revoke superuser access: ";
             string username;
             cin >> username;
+            cin.ignore();
             auto user = User::all().find(username);
             if (user != User::all().end()) {
                 if (user->second.is_superuser()) {
                     user->second.remove_superuser(username);
+                    cout << "Action successful\n";
                 }
                 else {
                     UserError("This user is already not a superuser!");
@@ -330,17 +448,33 @@ VIEW_CHOICES AdminDashboardView::display() {
             else {
                 UserError("User doesn't exists");
             }
+            system_pause
+            if(!current_user->is_superuser()){
+                return USER_DASHBOARD;
+            }
+            else{
+                return ADMIN_DASHBOARD;
+            }
         }
         case 8: {
             cout << "Please enter the name of the user to be removed: ";
             string username;
             cin >> username;
+            cin.ignore();
             auto user = User::all().find(username);
             if (user != User::all().end()) {
                 User::all().erase(user);
             }
             else {
-                UserError("User doesn't exists");
+                UserError error("User doesn't exists");
+                cout << error.print_error() << endl;
+            }
+            system_pause
+            if(User::all().find(current_user->get_username()) != User::all().end()){
+                return ADMIN_DASHBOARD;
+            }
+            else{
+                return SPLASH;
             }
         }
         case 9: {
@@ -348,13 +482,14 @@ VIEW_CHOICES AdminDashboardView::display() {
         }
         default: {
             cout << "Please select a valid option" << endl;
-            goto user_dashboard;
+            goto admin_dashboard;
         }
     }
 }
 
 VIEW_CHOICES ProfileView::display() {
     current_user->show_user_details();
+    system_pause
     if (current_user->is_superuser()) {
         return ADMIN_DASHBOARD;
     }
@@ -379,6 +514,7 @@ VIEW_CHOICES ConferenceDetailView::display() {
         cout << "Current Seat Availability: \t" << it.second.get_seats_available() << "\n\n";
     }
     cout << "\n\n";
+    system_pause
     if (current_user->get_username().empty()) {
         return VIEW_CHOICES(SPLASH);
 
@@ -397,12 +533,14 @@ VIEW_CHOICES RegisterDetailView::display() {
         return VIEW_CHOICES(USER_DASHBOARD);
     }
     cout << "Registration Detail View\n\n";
-    cout << "Enter the name of conference to view registration details\n";
+    c_name:
+    cout << "Enter the name of conference to view registration details from the following!\n";
     for (auto &i : Conference::conference_list()) {
         cout << i.first << "\n";
     }
     string c_name;
     cin >> c_name;
+    cin.ignore();
     if (Conference::conference_list().find(c_name) != Conference::conference_list().end()) {
         auto conference = Conference::conference_list().find(c_name)->second;
         cout << "Total Number of Registrations = " << conference.give_total_number_of_registrations() << endl;
@@ -415,35 +553,43 @@ VIEW_CHOICES RegisterDetailView::display() {
              << "4. Show Registration Type List\nEnter any other number to go back to the Dashboard\n";
         int choice;
         cin >> choice;
+        cin.ignore();
         switch (choice) {
             case 1: {
                 conference.show_final_attendee_list();
+                system_pause
                 goto show;
             }
             case 2: {
                 conference.show_registration_list();
+                system_pause
                 goto show;
             }
             case 3: {
                 conference.show_pending_payment_user_list();
+                system_pause
                 goto show;
             }
-                /*case 4: {
-                    cout << "\nEnter the type of list\n";
-                    string r_type;
-                    cin >> r_type;
-                    for(auto &i : conference.payment_details().get_registration_type_list()){
-                        cout << i.first << "\t" << i.second << "\n";
-                    }
-                    goto show;
-                }*/
+            case 4: {
+                cout << "\nEnter the type of list\n";
+                string r_type;
+                cin >> r_type;
+                cin.ignore();
+                for (auto &i : conference.payment_details().get_registration_type_list()) {
+                    cout << i.first << "\t" << i.second << "\n";
+                }
+                system_pause
+                goto show;
+            }
             default: {
                 return VIEW_CHOICES(ADMIN_DASHBOARD);
             }
         }
     }
     else {
-        //Error
+        UserError error = UserError("Please enter a valid name from the list!");
+        cout << error.print_error() << endl;
+        system_pause
+        goto c_name;
     }
-    return VIEW_CHOICES(REGISTER_DETAILS);
 }

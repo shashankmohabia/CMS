@@ -70,7 +70,7 @@ void User::show_user_details() {
     cout << "\nUsername: " << _username;
     cout << "\nE-mail: " << _email;
     cout << "\nContact: " << _contact;
-    cout << "\nDate of Registration" << _date_of_registration;
+    cout << "\nDate of Registration: " << _date_of_registration;
     cout << "\nAddress: " << _address;
     cout << "\nCity: " << _city;
     cout << "\nState: " << _state;
