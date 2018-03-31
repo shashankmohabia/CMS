@@ -18,7 +18,6 @@ private:
     string _err;
 public:
     explicit UserError(const string &);
-
     string print_error();
 };
 
