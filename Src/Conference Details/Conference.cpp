@@ -41,16 +41,19 @@ void Conference::update_c_name(string c_name) {
 }
 
 void Conference::update_c_date(string c_date) {
+    _conference_list.erase(_c_name);
     _c_date = std::move(c_date);
     _conference_list.insert(pair<string, Conference>(this->get_c_name(), *this));
 }
 
 void Conference::update_c_time(string c_time) {
+    _conference_list.erase(_c_name);
     _c_time = std::move(c_time);
     _conference_list.insert(pair<string, Conference>(this->get_c_name(), *this));
 }
 
 void Conference::update_c_venue(string c_venue) {
+    _conference_list.erase(_c_name);
     _c_venue = std::move(c_venue);
     _conference_list.insert(pair<string, Conference>(this->get_c_name(), *this));
 }
@@ -67,6 +70,7 @@ void Conference::show_conference_details() {
 }
 
 void Conference::update_seat_available(int seats) {
+    _conference_list.erase(_c_name);
     _seats_available = seats;
     _conference_list.insert(pair<string, Conference>(this->get_c_name(), *this));
 }
@@ -133,4 +137,8 @@ map<string, Conference> &Conference::conference_list() {
 
 Payment Conference::payment_details() {
     return _payment_details;
+}
+
+bool Conference::get_user_registration_status(string username) {
+    return find(_registration_list.begin(), _registration_list.end(), username) != _registration_list.end();
 }
