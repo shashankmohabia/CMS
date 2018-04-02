@@ -13,11 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="16e1ab52-ee86-4d1e-9784-029ca27961c9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Auth/User.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Auth/User.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Auth/User.h" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Auth/User.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Conference Details/Conference.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Conference Details/Conference.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Conference Details/Conference.h" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Conference Details/Conference.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/View/Views.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Src/View/Views.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +28,8 @@
       <file leaf-file-name="User.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/Auth/User.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1827">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="1890">
+              <caret line="105" column="34" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
               <folding>
                 <element signature="e#89#108#0" expanded="true" />
               </folding>
@@ -42,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Src/Auth/User.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="63" column="42" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="42" />
+            <state relative-caret-position="18">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="e#51#68#0" expanded="true" />
               </folding>
@@ -75,8 +70,8 @@
       <file leaf-file-name="Views.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/View/Views.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="606" column="57" lean-forward="true" selection-start-line="606" selection-start-column="57" selection-end-line="606" selection-end-column="57" />
+            <state relative-caret-position="10908">
+              <caret line="606" column="57" selection-start-line="606" selection-start-column="57" selection-end-line="606" selection-end-column="57" />
               <folding>
                 <element signature="e#0#2#0" />
                 <element signature="e#4177#4210#0" />
@@ -92,7 +87,7 @@
       <file leaf-file-name="Views.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/View/Views.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
+            <state relative-caret-position="1188">
               <caret line="66" column="26" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="26" />
               <folding>
                 <element signature="e#93#112#0" expanded="true" />
@@ -104,7 +99,7 @@
       <file leaf-file-name="Conference.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/Conference Details/Conference.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
+            <state relative-caret-position="414">
               <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding>
                 <element signature="e#102#121#0" expanded="true" />
@@ -125,10 +120,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Conference.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Conference.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/Conference Details/Conference.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="1656">
               <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
             </state>
           </provider>
@@ -145,7 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cin_in</find>
       <find>cin_int</find>
       <find>6969</find>
       <find>cin_ema</find>
@@ -175,6 +169,7 @@
       <find>get_regis</find>
       <find>find`</find>
       <find>find</find>
+      <find>vecto</find>
     </findStrings>
     <replaceStrings>
       <replace>_current_view</replace>
@@ -211,10 +206,10 @@
         <option value="$PROJECT_DIR$/Src/Registration/Payment.h" />
         <option value="$PROJECT_DIR$/Src/Init.cpp" />
         <option value="$PROJECT_DIR$/Src/Conference Details/Conference.h" />
-        <option value="$PROJECT_DIR$/Src/Auth/User.h" />
-        <option value="$PROJECT_DIR$/Src/Auth/User.cpp" />
         <option value="$PROJECT_DIR$/Src/View/Views.cpp" />
         <option value="$PROJECT_DIR$/Src/Conference Details/Conference.cpp" />
+        <option value="$PROJECT_DIR$/Src/Auth/User.h" />
+        <option value="$PROJECT_DIR$/Src/Auth/User.cpp" />
       </list>
     </option>
   </component>
@@ -237,6 +232,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,13 +261,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sms-master" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sms-master" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -351,7 +346,9 @@
       <workItem from="1522486351604" duration="15085000" />
       <workItem from="1522525517884" duration="2802000" />
       <workItem from="1522565665300" duration="3121000" />
-      <workItem from="1522572490517" duration="6677000" />
+      <workItem from="1522572490517" duration="8262000" />
+      <workItem from="1522601898833" duration="402000" />
+      <workItem from="1522644287617" duration="1410000" />
     </task>
     <task id="LOCAL-00001" summary="User model modified to single class">
       <created>1518193328445</created>
@@ -465,11 +462,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522503782993</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Major Bug Fixes!">
+      <created>1522581125767</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1522581125767</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171020000" />
+    <option name="totallyTimeSpent" value="174417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -477,7 +481,6 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1359375" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32832617" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.3296355" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5005208" side_tool="true" weight="0.94957083" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32939914" />
@@ -494,6 +497,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32976446" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32832617" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +550,8 @@
     <MESSAGE value="AdminDashboardView functionality completed(error handling not complete)!" />
     <MESSAGE value="Minor Bug Fixes!" />
     <MESSAGE value="Fixed input stream errors!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed input stream errors!" />
+    <MESSAGE value="Major Bug Fixes!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Major Bug Fixes!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -810,7 +815,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/View/Views.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
+        <state relative-caret-position="1188">
           <caret line="66" column="26" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="26" />
           <folding>
             <element signature="e#93#112#0" expanded="true" />
@@ -818,20 +823,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Auth/User.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="42" />
-          <folding>
-            <element signature="e#51#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Src/View/Views.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="606" column="57" lean-forward="true" selection-start-line="606" selection-start-column="57" selection-end-line="606" selection-end-column="57" />
+        <state relative-caret-position="10908">
+          <caret line="606" column="57" selection-start-line="606" selection-start-column="57" selection-end-line="606" selection-end-column="57" />
           <folding>
             <element signature="e#0#2#0" />
             <element signature="e#4177#4210#0" />
@@ -855,7 +850,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/Conference Details/Conference.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
+        <state relative-caret-position="414">
           <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
             <element signature="e#102#121#0" expanded="true" />
@@ -863,20 +858,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Src/Conference Details/Conference.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Src/Auth/User.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="1890">
+          <caret line="105" column="34" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
           <folding>
             <element signature="e#89#108#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/Conference Details/Conference.cpp">
+    <entry file="file://$PROJECT_DIR$/Src/Auth/User.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        <state relative-caret-position="18">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#51#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
