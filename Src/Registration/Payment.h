@@ -13,11 +13,11 @@ using namespace std;
 
 class Payment {
 private:
-    static map<string, int> _registration_type_list;    //type, payment_amount
+    map<string, int> _registration_type_list;    //type, payment_amount
 public:
     Payment()= default;
 
-    static int get_payment_amount(string);
+    int get_payment_amount(string);
 
     void add_registration_type(string, int);                   //combine add and update to modify
 

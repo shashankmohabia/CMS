@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o"
   "CMakeFiles/CMS.dir/Src/View/Views.cpp.o"
   "CMakeFiles/CMS.dir/Src/View/Menu.cpp.o"
+  "CMakeFiles/CMS.dir/Src/Database/File.cpp.o"
   "CMS.pdb"
   "CMS"
 )

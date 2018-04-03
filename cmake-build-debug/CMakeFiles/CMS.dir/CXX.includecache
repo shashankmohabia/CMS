@@ -42,7 +42,15 @@ algorithm
 ../Registration/Payment.h
 /home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
 
+/home/lakshya/CLionProjects/CMS/Src/Database/File.cpp
+File.h
+/home/lakshya/CLionProjects/CMS/Src/Database/File.h
+
+/home/lakshya/CLionProjects/CMS/Src/Database/File.h
+
 /home/lakshya/CLionProjects/CMS/Src/Init.cpp
+fstream
+-
 Init.h
 /home/lakshya/CLionProjects/CMS/Src/Init.h
 

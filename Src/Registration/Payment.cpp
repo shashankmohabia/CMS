@@ -4,8 +4,6 @@
 
 #include "Payment.h"
 
-map<string, int> Payment::_registration_type_list = {};
-
 int Payment::get_payment_amount(string type) {
     return _registration_type_list.find(type)->second;
 }

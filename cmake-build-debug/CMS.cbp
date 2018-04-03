@@ -96,6 +96,12 @@
 		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h">
 			<Option target="CMS"/>
 		</Unit>
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Database/File.cpp">
+			<Option target="CMS"/>
+		</Unit>
+		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Database/File.h">
+			<Option target="CMS"/>
+		</Unit>
 		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Init.cpp">
 			<Option target="CMS"/>
 		</Unit>
