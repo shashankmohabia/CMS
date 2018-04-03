@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lakshya/CLionProjects/CMS/Src/Auth/User.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Auth/User.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o"
+  "/home/lakshya/CLionProjects/CMS/Src/Database/File.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Database/File.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/Init.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Init.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/Registration/Payment.cpp.o"
   "/home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp" "/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMakeFiles/CMS.dir/Src/View/Menu.cpp.o"

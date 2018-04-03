@@ -177,6 +177,33 @@ Src/Conference_Details/Conference.cpp.s:
 	$(MAKE) -f CMakeFiles/CMS.dir/build.make CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.s
 .PHONY : Src/Conference_Details/Conference.cpp.s
 
+Src/Database/File.o: Src/Database/File.cpp.o
+
+.PHONY : Src/Database/File.o
+
+# target to build an object file
+Src/Database/File.cpp.o:
+	$(MAKE) -f CMakeFiles/CMS.dir/build.make CMakeFiles/CMS.dir/Src/Database/File.cpp.o
+.PHONY : Src/Database/File.cpp.o
+
+Src/Database/File.i: Src/Database/File.cpp.i
+
+.PHONY : Src/Database/File.i
+
+# target to preprocess a source file
+Src/Database/File.cpp.i:
+	$(MAKE) -f CMakeFiles/CMS.dir/build.make CMakeFiles/CMS.dir/Src/Database/File.cpp.i
+.PHONY : Src/Database/File.cpp.i
+
+Src/Database/File.s: Src/Database/File.cpp.s
+
+.PHONY : Src/Database/File.s
+
+# target to generate assembly for a file
+Src/Database/File.cpp.s:
+	$(MAKE) -f CMakeFiles/CMS.dir/build.make CMakeFiles/CMS.dir/Src/Database/File.cpp.s
+.PHONY : Src/Database/File.cpp.s
+
 Src/Init.o: Src/Init.cpp.o
 
 .PHONY : Src/Init.o
@@ -327,6 +354,9 @@ help:
 	@echo "... Src/Conference_Details/Conference.o"
 	@echo "... Src/Conference_Details/Conference.i"
 	@echo "... Src/Conference_Details/Conference.s"
+	@echo "... Src/Database/File.o"
+	@echo "... Src/Database/File.i"
+	@echo "... Src/Database/File.s"
 	@echo "... Src/Init.o"
 	@echo "... Src/Init.i"
 	@echo "... Src/Init.s"
