@@ -5,6 +5,7 @@
 #include <fstream>
 #include "Init.h"
 
+Init* Init::instance = nullptr;
 
 Init::Init() {
     // Dummy Data
@@ -24,10 +25,17 @@ Init::Init() {
 }
 
 void Init::start() {
-    Menu menu;
-    /* Gets an instance of Menu class to select views on runtime, the implementation is in core/menu.cpp */
+    Menu* menu = Menu::getInstance();
     do {
-        menu.display();
-    } while (!menu.exitcode());
+        menu->display();
+    } while (!menu->exitcode());
+}
+
+Init* Init::getInstance() {
+    if(instance == nullptr){
+        instance = new Init;
+        return instance;
+    }
+    return instance;
 }
 

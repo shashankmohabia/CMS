@@ -1,8 +1,6 @@
-#include <iostream>
 #include "Init.h"
 
 int main() {
-    Init init;
-    init.start();
+    (Init::getInstance())->start();
     return 0;
 }

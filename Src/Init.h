@@ -11,10 +11,12 @@
 #include "Registration/Payment.h"
 
 
-
-
 class Init {
+    static Init* instance;
 public:
+
+    static Init *getInstance();
+
     Init();
 
     void start();

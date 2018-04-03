@@ -10,12 +10,15 @@
 
 class Menu {
 private:
+    static Menu* instance;
     bool EXIT_CODE;
     enum VIEW_CHOICES _view_choices;
     Views* _current_view;
 
 public:
     Menu();
+
+    static Menu* getInstance();
 
     bool exitcode();
 

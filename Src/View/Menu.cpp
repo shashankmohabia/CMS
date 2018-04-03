@@ -4,6 +4,8 @@
 
 #include "Menu.h"
 
+Menu* Menu::instance = nullptr;
+
 Menu::Menu() {
     EXIT_CODE = false;
     _view_choices = SPLASH;
@@ -65,4 +67,12 @@ void Menu::display() {
     }
 
     _view_choices = _current_view->display();
+}
+
+Menu *Menu::getInstance() {
+    if(instance == nullptr){
+        instance = new Menu;
+        return instance;
+    }
+    return instance;
 }
