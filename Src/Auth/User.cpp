@@ -8,14 +8,14 @@
 
 map<string, User> User::_user_list = {};
 
-User* current_user = new User;
+User *current_user = new User;
 
 User::User(string username, string password) {
     _username = std::move(username);
     _password = std::move(password);
 }
 
-map<string, User>& User::all() {
+map<string, User> &User::all() {
     return _user_list;
 }
 
@@ -48,19 +48,19 @@ void User::change_password(string new_password) {
 }
 
 void User::save() {
-    if(User::all().find(this->get_username())!=User::all().end()){
+    if (User::all().find(this->get_username()) != User::all().end()) {
         UserError("User already exists");
     }
-    else{
+    else {
         _user_list.insert(pair<string, User>(this->get_username(), *this));
     }
 }
 
 void User::remove(string username) {
-    if(User::all().find(username)==User::all().end()){
+    if (User::all().find(username) == User::all().end()) {
         UserError("User doesn't exists");
     }
-    else{
+    else {
         User::all().erase(User::all().find(username));
     }
 }
@@ -70,19 +70,20 @@ void User::show_user_details() {
     cout << "\nUsername: " << _username;
     cout << "\nE-mail: " << _email;
     cout << "\nContact: " << _contact;
-    cout << "\nDate of Registration" << _date_of_registration;
+    cout << "\nDate of Registration: " << _date_of_registration;
     cout << "\nAddress: " << _address;
     cout << "\nCity: " << _city;
     cout << "\nState: " << _state;
     cout << "\nCountry: " << _country;
     cout << "\nPincode: " << _pincode;
     cout << "\nGender: " << _gender;
-    cout << "\nSuperuser Status: " << _superuser_status <<"\n\n";
+    cout << "\nSuperuser Status: ";
+    cout << std::boolalpha << _superuser_status << "\n\n";
 }
 
 void User::create_superuser(string username) {
     auto user = User::all().find(username)->second;
-    if(user.is_superuser()) {
+    if (user.is_superuser()) {
         UserError("This User is already a superuser!");
     }
     else {
@@ -92,7 +93,7 @@ void User::create_superuser(string username) {
 
 void User::remove_superuser(string username) {
     auto user = User::all().find(username)->second;
-    if(!user.is_superuser()) {
+    if (!user.is_superuser()) {
         UserError("This User is already not a superuser!");
     }
     else {
@@ -171,11 +172,11 @@ User::User(string first_name, string last_name, string username, string password
 }
 
 void User::update_registered_conference_list(string conference, string type) {
-    for(int i = 0; i <_registered_conference_list.size(); i++){
-        if(_registered_conference_list[i].first == conference){
+    for (int i = 0; i < _registered_conference_list.size(); i++) {
+        if (_registered_conference_list[i].first == conference) {
             UserError("You are already registered for the conference!");
         }
-        else{
+        else {
             _registered_conference_list.emplace_back(conference, type);
         }
     }
@@ -190,7 +191,7 @@ void User::remove_superuser() {
 }
 
 void User::show_registered_conference_list() {
-    if(_registered_conference_list.empty()){
+    if (_registered_conference_list.empty()) {
         cout << "Not registered for any conferences!\n";
     }
     else {
@@ -201,22 +202,25 @@ void User::show_registered_conference_list() {
 }
 
 void User::registered_conference_list_payment() {
-    if(_registered_conference_list.empty()){
+    if (_registered_conference_list.empty()) {
         cout << "Not registered for any conferences!\n";
     }
     else {
-        for(int i = 0; i < _registered_conference_list.size(); i++){
-            cout << i+1 << "\t" << _registered_conference_list[i].first << "\t" << _registered_conference_list[i].second << endl;
+        for (int i = 0; i < _registered_conference_list.size(); i++) {
+            cout << i + 1 << "\t" << _registered_conference_list[i].first << "\t"
+                 << _registered_conference_list[i].second << endl;
         }
         cout << "\nPlease enter the number of the conference for which you want to pay!\n";
         int choice;
         cin >> choice;
-        if(choice > 0 && choice <= _registered_conference_list.size()){
-            cout << "The amount to be paid is Rs. " <<  Conference::conference_list().find(_registered_conference_list[choice].first)->second.payment_details().get_payment_amount(_registered_conference_list[choice].second);
+        if (choice > 0 && choice <= _registered_conference_list.size()) {
+            cout << "The amount to be paid is Rs. " << Conference::conference_list().find(
+                    _registered_conference_list[choice].first)->second.payment_details().get_payment_amount(
+                    _registered_conference_list[choice].second);
             cout << "\nDo you really want to pay?\nPress Y to pay!\n";
             char a;
             cin >> a;
-            if(a == 'Y') {
+            if (a == 'Y') {
                 Conference::conference_list().find(_registered_conference_list[choice].first)->second.make_payment(
                         this->get_username());
                 cout << "Payment Successful\n";
@@ -225,13 +229,17 @@ void User::registered_conference_list_payment() {
                 //Error
             }
         }
-        else{
+        else {
             //Error
         }
     }
 }
 
-UserError::UserError(const string& err) {
+vector <pair<string, string> > User::registered_conference_list() {
+    return _registered_conference_list;
+}
+
+UserError::UserError(const string &err) {
     _err = err;
 }
 

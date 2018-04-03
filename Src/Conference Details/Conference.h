@@ -26,7 +26,7 @@ private:
 public:
     Conference() = default;
 
-    Conference(string, string, string, string);    //_c_name, _c_date, _c_venue, _c_time, _seats_available
+    explicit Conference(string, string, string, string);    //_c_name, _c_date, _c_venue, _c_time, _seats_available
 
     int get_seats_available();
 
@@ -48,9 +48,11 @@ public:
 
     void update_c_venue(string);
 
-    bool get_user_payment_status(string);   //username
+    bool get_user_registration_status(string);  //username
 
-    void make_payment(string);              //username
+    bool get_user_payment_status(string);       //username
+
+    void make_payment(string);                  //username
 
     void show_conference_details();
 
