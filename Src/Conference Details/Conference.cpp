@@ -135,7 +135,7 @@ map<string, Conference> &Conference::conference_list() {
     return _conference_list;
 }
 
-Payment Conference::payment_details() {
+Payment &Conference::payment_details() {
     return _payment_details;
 }
 

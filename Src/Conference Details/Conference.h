@@ -74,7 +74,7 @@ public:
 
     static map<string, Conference> &conference_list();
 
-    Payment payment_details();
+    Payment &payment_details();
 
 };
 

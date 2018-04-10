@@ -8,12 +8,13 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <vector>
 
 using namespace std;
 
 class Payment {
 private:
-    map<string, int> _registration_type_list;    //type, payment_amount
+    vector <pair <string, int> > _registration_type_list;    //type, payment_amount
 public:
     Payment()= default;
 
@@ -23,7 +24,7 @@ public:
 
     void update_registration_type(string, int);         //type, amount
 
-    map<string, int>& get_registration_type_list();
+    vector<pair<string, int>> & get_registration_type_list();
 };
 
 

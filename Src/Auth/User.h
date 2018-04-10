@@ -103,7 +103,7 @@ public:
 
     void registered_conference_list_payment();
 
-    vector <pair<string, string> > registered_conference_list();
+    vector<pair<string, string>> & registered_conference_list();
 
 };
 

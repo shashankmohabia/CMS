@@ -174,12 +174,12 @@ User::User(string first_name, string last_name, string username, string password
 void User::update_registered_conference_list(string conference, string type) {
     for (int i = 0; i < _registered_conference_list.size(); i++) {
         if (_registered_conference_list[i].first == conference) {
-            UserError("You are already registered for the conference!");
-        }
-        else {
-            _registered_conference_list.emplace_back(conference, type);
+            UserError error("You are already registered for the conference!");
+            cout << error.print_error();
+            return;
         }
     }
+    _registered_conference_list.emplace_back(conference, type);
 }
 
 void User::create_superuser() {
@@ -191,11 +191,11 @@ void User::remove_superuser() {
 }
 
 void User::show_registered_conference_list() {
-    if (_registered_conference_list.empty()) {
+    if (User::all().find(current_user->get_username())->second.registered_conference_list().empty()) {
         cout << "Not registered for any conferences!\n";
     }
     else {
-        for (auto &i : _registered_conference_list) {
+        for (auto &i : User::all().find(current_user->get_username())->second.registered_conference_list()) {
             cout << i.first << "\t" << i.second << endl;
         }
     }
@@ -235,7 +235,7 @@ void User::registered_conference_list_payment() {
     }
 }
 
-vector <pair<string, string> > User::registered_conference_list() {
+vector<pair<string, string>> & User::registered_conference_list() {
     return _registered_conference_list;
 }
 

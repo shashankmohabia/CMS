@@ -14,12 +14,8 @@ Init::Init() {
     user.create_superuser();
     conference = new Conference("IEEE", "2 oct", "Jaipur", "12:12 PM");
     conference->update_seat_available(20);
-    conference->payment_details().add_registration_type("Normal", 69);
-    conference->payment_details().add_registration_type("VIP", 6969);
-    Conference *conference1 = new Conference("CON1", "6 Sep", "Chandigarh", " 6:09 PM");
-    conference1->payment_details().add_registration_type("Normal", 6969);
-    conference1->payment_details().add_registration_type("VIP", 696969);
-    conference1-> update_seat_available(69);
+    Conference::conference_list().find("IEEE")->second.payment_details().add_registration_type("Normal", 69);
+    Conference::conference_list().find("IEEE")->second.payment_details().add_registration_type("VIP", 6969);
     //cout << user.is_superuser();
     user.save();
 }
