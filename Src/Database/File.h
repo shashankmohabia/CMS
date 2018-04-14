@@ -5,6 +5,10 @@
 #ifndef CMS_FILE_H
 #define CMS_FILE_H
 
+#include <fstream>
+
+using namespace std;
+
 
 class File {
 

@@ -594,7 +594,12 @@ VIEW_CHOICES ProfileView::display() {
 VIEW_CHOICES PaymentView::display() {
     current_user->registered_conference_list_payment();
     system_pause
-    return USER_DASHBOARD;
+    if (current_user->is_superuser()) {
+        return ADMIN_DASHBOARD;
+    }
+    else {
+        return USER_DASHBOARD;
+    }
 
 }
 

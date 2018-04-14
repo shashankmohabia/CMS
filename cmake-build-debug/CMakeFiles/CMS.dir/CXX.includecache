@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/lakshya/CLionProjects/CMS/Src/Auth/User.cpp
+/home/lakshya/Mohabia/CMS/Src/Auth/User.cpp
 User.h
-/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
+/home/lakshya/Mohabia/CMS/Src/Auth/User.h
 utility
 -
 
-/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
+/home/lakshya/Mohabia/CMS/Src/Auth/User.h
 iostream
 -
 string
@@ -22,13 +22,13 @@ map
 vector
 -
 ../Conference Details/Conference.h
-/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
+/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.h
 
-/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp
+/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.cpp
 Conference.h
-/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
+/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.h
 
-/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
+/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.h
 iostream
 -
 string
@@ -40,55 +40,67 @@ vector
 algorithm
 -
 ../Registration/Payment.h
-/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
+/home/lakshya/Mohabia/CMS/Src/Registration/Payment.h
 
-/home/lakshya/CLionProjects/CMS/Src/Database/File.cpp
+/home/lakshya/Mohabia/CMS/Src/Database/File.cpp
+iostream
+-
 File.h
-/home/lakshya/CLionProjects/CMS/Src/Database/File.h
+/home/lakshya/Mohabia/CMS/Src/Database/File.h
+../Conference Details/Conference.h
+/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.h
+../Auth/User.h
+/home/lakshya/Mohabia/CMS/Src/Auth/User.h
 
-/home/lakshya/CLionProjects/CMS/Src/Database/File.h
+/home/lakshya/Mohabia/CMS/Src/Database/File.h
+fstream
+-
 
-/home/lakshya/CLionProjects/CMS/Src/Init.cpp
+/home/lakshya/Mohabia/CMS/Src/Init.cpp
 fstream
 -
 Init.h
-/home/lakshya/CLionProjects/CMS/Src/Init.h
+/home/lakshya/Mohabia/CMS/Src/Init.h
 
-/home/lakshya/CLionProjects/CMS/Src/Init.h
+/home/lakshya/Mohabia/CMS/Src/Init.h
 Auth/User.h
-/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
+/home/lakshya/Mohabia/CMS/Src/Auth/User.h
 View/Menu.h
-/home/lakshya/CLionProjects/CMS/Src/View/Menu.h
+/home/lakshya/Mohabia/CMS/Src/View/Menu.h
 Conference Details/Conference.h
-/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
+/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.h
 Registration/Payment.h
-/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
+/home/lakshya/Mohabia/CMS/Src/Registration/Payment.h
 
-/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.cpp
+/home/lakshya/Mohabia/CMS/Src/Registration/Payment.cpp
+algorithm
+-
 Payment.h
-/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
+/home/lakshya/Mohabia/CMS/Src/Registration/Payment.h
 
-/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
+/home/lakshya/Mohabia/CMS/Src/Registration/Payment.h
 iostream
 -
 string
 -
 map
 -
+vector
+-
 
-/home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp
+/home/lakshya/Mohabia/CMS/Src/View/Menu.cpp
 Menu.h
-/home/lakshya/CLionProjects/CMS/Src/View/Menu.h
+/home/lakshya/Mohabia/CMS/Src/View/Menu.h
 
-/home/lakshya/CLionProjects/CMS/Src/View/Menu.h
+/home/lakshya/Mohabia/CMS/Src/View/Menu.h
 Views.h
-/home/lakshya/CLionProjects/CMS/Src/View/Views.h
+/home/lakshya/Mohabia/CMS/Src/View/Views.h
 
-/home/lakshya/CLionProjects/CMS/Src/View/Views.cpp
+/home/lakshya/Mohabia/CMS/Src/View/Views.cpp
 Views.h
-/home/lakshya/CLionProjects/CMS/Src/View/Views.h
+/home/lakshya/Mohabia/CMS/Src/View/Views.h
 
-/home/lakshya/CLionProjects/CMS/Src/View/Views.h
+/home/lakshya/Mohabia/CMS/Src/View/Views.h
 iostream
 -
 ctime
@@ -96,15 +108,13 @@ ctime
 chrono
 -
 ../Auth/User.h
-/home/lakshya/CLionProjects/CMS/Src/Auth/User.h
+/home/lakshya/Mohabia/CMS/Src/Auth/User.h
 ../Conference Details/Conference.h
-/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h
+/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.h
 ../Registration/Payment.h
-/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h
+/home/lakshya/Mohabia/CMS/Src/Registration/Payment.h
 
-/home/lakshya/CLionProjects/CMS/Src/main.cpp
-iostream
--
+/home/lakshya/Mohabia/CMS/Src/main.cpp
 Init.h
-/home/lakshya/CLionProjects/CMS/Src/Init.h
+/home/lakshya/Mohabia/CMS/Src/Init.h
 

@@ -10,6 +10,12 @@ CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o: ../Src/Conference\ D
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o: ../Src/Conference\ Details/Conference.h
 CMakeFiles/CMS.dir/Src/Conference_Details/Conference.cpp.o: ../Src/Registration/Payment.h
 
+CMakeFiles/CMS.dir/Src/Database/File.cpp.o: ../Src/Auth/User.h
+CMakeFiles/CMS.dir/Src/Database/File.cpp.o: ../Src/Conference\ Details/Conference.h
+CMakeFiles/CMS.dir/Src/Database/File.cpp.o: ../Src/Database/File.cpp
+CMakeFiles/CMS.dir/Src/Database/File.cpp.o: ../Src/Database/File.h
+CMakeFiles/CMS.dir/Src/Database/File.cpp.o: ../Src/Registration/Payment.h
+
 CMakeFiles/CMS.dir/Src/Init.cpp.o: ../Src/Auth/User.h
 CMakeFiles/CMS.dir/Src/Init.cpp.o: ../Src/Conference\ Details/Conference.h
 CMakeFiles/CMS.dir/Src/Init.cpp.o: ../Src/Init.cpp

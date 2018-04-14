@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
+				<Option working_dir="/home/lakshya/Mohabia/CMS/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
+				<Option working_dir="/home/lakshya/Mohabia/CMS/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
+				<Option working_dir="/home/lakshya/Mohabia/CMS/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CMS">
-				<Option output="/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMS" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
+				<Option output="/home/lakshya/Mohabia/CMS/cmake-build-debug/CMS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lakshya/Mohabia/CMS/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMS"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMS"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CMS/fast">
-				<Option output="/home/lakshya/CLionProjects/CMS/cmake-build-debug/CMS" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lakshya/CLionProjects/CMS/cmake-build-debug"/>
+				<Option output="/home/lakshya/Mohabia/CMS/cmake-build-debug/CMS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lakshya/Mohabia/CMS/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,59 +77,59 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMS/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/CLionProjects/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMS/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lakshya/Mohabia/CMS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Auth/User.cpp">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Auth/User.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Auth/User.h">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Auth/User.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.cpp">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Conference Details/Conference.h">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Conference Details/Conference.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Database/File.cpp">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Database/File.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Database/File.h">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Database/File.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Init.cpp">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Init.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Init.h">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Init.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.cpp">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Registration/Payment.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/Registration/Payment.h">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/Registration/Payment.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/View/Menu.cpp">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/View/Menu.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/View/Menu.h">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/View/Menu.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/View/Views.cpp">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/View/Views.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/View/Views.h">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/View/Views.h">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/Src/main.cpp">
+		<Unit filename="/home/lakshya/Mohabia/CMS/Src/main.cpp">
 			<Option target="CMS"/>
 		</Unit>
-		<Unit filename="/home/lakshya/CLionProjects/CMS/CMakeLists.txt">
+		<Unit filename="/home/lakshya/Mohabia/CMS/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

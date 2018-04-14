@@ -6,6 +6,11 @@
 
 #include <utility>
 
+#define system_pause {                                          \
+            cout << "Press Enter to continue!\n";               \
+            cin.ignore(numeric_limits<streamsize>::max(),'\n'); \
+        }
+
 map<string, User> User::_user_list = {};
 
 User *current_user = new User;
@@ -206,6 +211,7 @@ void User::registered_conference_list_payment() {
         cout << "Not registered for any conferences!\n";
     }
     else {
+        wrong_choice:
         for (int i = 0; i < _registered_conference_list.size(); i++) {
             cout << i + 1 << "\t" << _registered_conference_list[i].first << "\t"
                  << _registered_conference_list[i].second << endl;
@@ -214,6 +220,8 @@ void User::registered_conference_list_payment() {
         int choice;
         cin >> choice;
         if (choice > 0 && choice <= _registered_conference_list.size()) {
+            choice--;
+            cout << "hi\n";
             cout << "The amount to be paid is Rs. " << Conference::conference_list().find(
                     _registered_conference_list[choice].first)->second.payment_details().get_payment_amount(
                     _registered_conference_list[choice].second);
@@ -226,11 +234,13 @@ void User::registered_conference_list_payment() {
                 cout << "Payment Successful\n";
             }
             else {
-                //Error
+                cout << "Payment Cancelled!\n";
             }
         }
         else {
-            //Error
+            cout << "Please enter a valid choice!\n";
+            system_pause
+            goto wrong_choice;
         }
     }
 }
