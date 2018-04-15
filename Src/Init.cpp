@@ -4,6 +4,7 @@
 
 #include <fstream>
 #include "Init.h"
+#include "Database/File.h"
 
 Init* Init::instance = nullptr;
 
@@ -25,6 +26,7 @@ void Init::start() {
     do {
         menu->display();
     } while (!menu->exitcode());
+    /*File::write_conference_list();*/
 }
 
 Init* Init::getInstance() {

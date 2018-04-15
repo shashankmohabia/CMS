@@ -249,6 +249,50 @@ vector<pair<string, string>> & User::registered_conference_list() {
     return _registered_conference_list;
 }
 
+const string &User::get_first_name() const {
+    return _first_name;
+}
+
+const string &User::get_last_name() const {
+    return _last_name;
+}
+
+const string &User::get_email() const {
+    return _email;
+}
+
+const string &User::get_contact() const {
+    return _contact;
+}
+
+const string &User::get_date_of_registration() const {
+    return _date_of_registration;
+}
+
+const string &User::get_address() const {
+    return _address;
+}
+
+const string &User::get_city() const {
+    return _city;
+}
+
+const string &User::get_state() const {
+    return _state;
+}
+
+const string &User::get_country() const {
+    return _country;
+}
+
+const string &User::get_pincode() const {
+    return _pincode;
+}
+
+char User::get_gender() const {
+    return _gender;
+}
+
 UserError::UserError(const string &err) {
     _err = err;
 }

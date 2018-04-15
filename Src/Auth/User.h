@@ -27,7 +27,7 @@ class User {
     bool _superuser_status = false;
     string _first_name, _last_name, _username, _password, _email, _contact;
     string _date_of_registration, _address, _city, _state, _country, _pincode;
-    char _gender;
+    char _gender{};
 
 
 public:
@@ -104,6 +104,28 @@ public:
     void registered_conference_list_payment();
 
     vector<pair<string, string>> & registered_conference_list();
+
+    const string &get_first_name() const;
+
+    const string &get_last_name() const;
+
+    const string &get_email() const;
+
+    const string &get_contact() const;
+
+    const string &get_date_of_registration() const;
+
+    const string &get_address() const;
+
+    const string &get_city() const;
+
+    const string &get_state() const;
+
+    const string &get_country() const;
+
+    const string &get_pincode() const;
+
+    char get_gender() const;
 
 };
 

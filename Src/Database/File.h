@@ -11,14 +11,14 @@ using namespace std;
 
 
 class File {
-
+public:
     void read_conference_list();
 
     void read_user_list();
 
-    void write_conference_list();
+    static void write_conference_list();
 
-    void write_user_list();
+    static void write_user_list();
 };
 
 
