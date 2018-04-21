@@ -12,7 +12,7 @@ using namespace std;
 
 class File {
 public:
-    void read_conference_list();
+    static void read_conference_list();
 
     static void read_user_list();
 
