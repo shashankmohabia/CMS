@@ -14,7 +14,7 @@ class File {
 public:
     void read_conference_list();
 
-    void read_user_list();
+    static void read_user_list();
 
     static void write_conference_list();
 
