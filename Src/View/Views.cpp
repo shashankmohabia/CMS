@@ -172,8 +172,8 @@ VIEW_CHOICES RegisterView::display() {
     wrong_gender:
     cout << "Enter Gender[M/F/O]: ";
     cin_space(gender);
-    if (gender[0] != 'M' && gender[0] != 'F' && gender[0] != 'O' && gender[0] != 'm' && gender[0] != 'f' &&
-        gender[0] != 'o') {
+    if ((gender[0] != 'M' && gender[0] != 'F' && gender[0] != 'O' && gender[0] != 'm' && gender[0] != 'f' &&
+        gender[0] != 'o') || gender.size() != 1) {
         UserError error("Please enter from given options only!");
         cout << error.print_error() << endl;
         goto wrong_gender;
@@ -619,11 +619,13 @@ VIEW_CHOICES ConferenceDetailView::display() {
         cout << "Venue: \t\t\t\t\t\t" << it.second.get_c_venue() << endl;
         cout << "Current Seat Availability: \t" << it.second.get_seats_available() << endl;
         cout << "Types\t";
-        for (auto &i : Conference::conference_list().find(it.second.get_c_name())->second.payment_details().get_registration_type_list()){
+        for (auto &i : Conference::conference_list().find(
+                it.second.get_c_name())->second.payment_details().get_registration_type_list()) {
             cout << i.first << "\t";
         }
         cout << "\n\t\t\t";
-        for (auto &i : Conference::conference_list().find(it.second.get_c_name())->second.payment_details().get_registration_type_list()){
+        for (auto &i : Conference::conference_list().find(
+                it.second.get_c_name())->second.payment_details().get_registration_type_list()) {
             cout << i.second << "\t";
         }
         cout << "\n\n";
@@ -657,18 +659,36 @@ VIEW_CHOICES RegisterDetailView::display() {
     cin_space(c_name);
     if (Conference::conference_list().find(c_name) != Conference::conference_list().end()) {
         auto conference = Conference::conference_list().find(c_name)->second;
-        cout << "Total Number of Registrations = " << conference.give_total_number_of_registrations() << endl;
-        cout << "Total Number of Pending Registrations = " << conference.give_total_number_of_pending_registrations()
-             << endl;
-        cout << "Total Number of Authorized Registrations = " << conference.give_total_number_of_attendees() << endl;
+        if (conference.give_total_number_of_registrations() != 0) {
+            cout << "Total Number of Registrations = " << conference.give_total_number_of_registrations() << endl;
+        }
+        else {
+            cout << "No registrations\n";
+        }
+        if (conference.give_total_number_of_pending_registrations() != 0) {
+            cout << "Total Number of Pending Registrations = "
+                 << conference.give_total_number_of_pending_registrations() << endl;
+        }
+        else{
+            cout << "No pending registrations\n";
+        }
+        if(conference.give_total_number_of_attendees() != 0) {
+            cout << "Total Number of Authorized Registrations = " << conference.give_total_number_of_attendees()
+                 << endl;
+        }
+        else{
+            cout << "No authorized registrations\n";
+        }
         cout << "\nChoose any one of the options\n";
         show:
         cout << "1. Show Final Attendee List\n2. Show Registered User List\n3. Show Pending Payment User List\n"
              << "\nEnter any other number to go back to the Dashboard\n";
-        int choice;
-        cin >> choice;
-        cin.ignore();
-        switch (choice) {
+        string input;
+        cin_space(input);
+        if (input[0] != '1' && input[0] != '2' && input[0] != '3'){
+            input = "0";
+        }
+        switch (stoi(input)) {
             case 1: {
                 conference.show_final_attendee_list();
                 system_pause
