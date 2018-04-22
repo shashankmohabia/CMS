@@ -84,10 +84,10 @@ VIEW_CHOICES SplashView::display() {
     int choice;
     cout << "1. Login\n2. Register\n3. Details\n4. Exit" << endl;
     cin_space(input);
-    if(input != "1" && input != "2" && input != "3" && input != "4"){
+    if (input != "1" && input != "2" && input != "3" && input != "4") {
         choice = 0;
     }
-    else{
+    else {
         choice = stoi(input);
     }
     switch (choice) {
@@ -106,7 +106,7 @@ VIEW_CHOICES SplashView::display() {
         default: {
             cout << "Please select a valid option!" << endl;
             system_pause
-            return VIEW_CHOICES (SPLASH);
+            return VIEW_CHOICES(SPLASH);
             break;
         }
     }
@@ -171,14 +171,13 @@ VIEW_CHOICES RegisterView::display() {
     /*cout << lastName << endl;*/
     wrong_gender:
     cout << "Enter Gender[M/F/O]: ";
-    cin >> gender;
-    if (gender.size() != 1 && gender[0] != 'M' && gender[0] != 'F' && gender[0] != 'O' && gender[0] != 'm' &&
-        gender[0] != 'f' && gender[0] != 'o') {
+    cin_space(gender);
+    if (gender[0] != 'M' && gender[0] != 'F' && gender[0] != 'O' && gender[0] != 'm' && gender[0] != 'f' &&
+        gender[0] != 'o') {
         UserError error("Please enter from given options only!");
         cout << error.print_error() << endl;
         goto wrong_gender;
     }
-    cin.ignore();
     wrong_password :
     cout << "Enter Password: ";
     cin_space(password);
@@ -284,7 +283,7 @@ VIEW_CHOICES UserDashboardView::display() {
                 cout << c_type << "\n";
                 bool check = false;
                 for (auto &i : rt_list) {
-                    if(i.first == c_type){
+                    if (i.first == c_type) {
                         check = true;
                         break;
                     }
@@ -411,7 +410,7 @@ VIEW_CHOICES AdminDashboardView::display() {
             wrong_conference_name:
             cout << "Name: ";
             cin_space(name);
-            if(Conference::conference_list().find(name)!=Conference::conference_list().end()){
+            if (Conference::conference_list().find(name) != Conference::conference_list().end()) {
                 cout << "Please enter a unique name for conference. The name is already taken!\n";
                 goto wrong_conference_name;
             }
@@ -427,12 +426,12 @@ VIEW_CHOICES AdminDashboardView::display() {
             Conference(name, date, venue, time);
             Conference::conference_list().find(name)->second.update_seat_available(seats);
             string s = "Hi";
-            while(s != "$"){
+            while (s != "$") {
                 string type;
                 wrong_type:
                 cout << "Enter the type of conference";
                 cin_space(type);
-                if(type.empty()){
+                if (type.empty()) {
                     cout << "Please enter a valid type";
                     goto wrong_type;
                 }
