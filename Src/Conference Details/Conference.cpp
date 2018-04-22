@@ -142,3 +142,11 @@ Payment &Conference::payment_details() {
 bool Conference::get_user_registration_status(string username) {
     return find(_registration_list.begin(), _registration_list.end(), username) != _registration_list.end();
 }
+
+vector<string> &Conference::get_registration_list() {
+    return _registration_list;
+}
+
+vector<string> &Conference::get_payment_done_list() {
+    return _payment_done_list;
+}

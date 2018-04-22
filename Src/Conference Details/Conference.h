@@ -76,6 +76,10 @@ public:
 
     Payment &payment_details();
 
+    vector<string> & get_registration_list();
+
+    vector<string> & get_payment_done_list();
+
 };
 
 

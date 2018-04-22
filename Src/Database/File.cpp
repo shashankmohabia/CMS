@@ -54,6 +54,22 @@ void File::read_conference_list() {
                     }
                 }
                 con_file.close();
+                string registration_list_name = "Conference/Registration_List/";
+                registration_list_name.append(conference.get_c_name());
+                registration_list_name.append(".txt");
+                ifstream registration_list(registration_list_name);
+                while (getline(registration_list, read)){
+                    Conference::conference_list().find(conference.get_c_name())->second.get_registration_list().push_back(read);
+                }
+                registration_list.close();
+                string payment_done_list_name = "Conference/Payment_Done_List/";
+                payment_done_list_name.append(conference.get_c_name());
+                payment_done_list_name.append(".txt");
+                ifstream payment_done_list(payment_done_list_name);
+                while (getline(registration_list, read)){
+                    Conference::conference_list().find(conference.get_c_name())->second.get_payment_done_list().push_back(read);
+                }
+                payment_done_list.close();
                 string payment_file_name = "Conference/Payment/";
                 payment_file_name.append(conference.get_c_name());
                 payment_file_name.append(".txt");
@@ -195,6 +211,22 @@ void File::write_conference_list() {
             con_file << i.second.get_c_venue() << "\n";
             con_file << i.second.get_seats_available() << "\n";
             con_file.close();
+            string registration_list_name = "Conference/Registration_List/";
+            registration_list_name.append(i.second.get_c_name());
+            registration_list_name.append(".txt");
+            ofstream registration_list(registration_list_name);
+            for (auto &it : i.second.get_registration_list()){
+                registration_list << it << "\n";
+            }
+            registration_list.close();
+            string payment_done_list_name = "Conference/Payment_Done_List/";
+            payment_done_list_name.append(i.second.get_c_name());
+            payment_done_list_name.append(".txt");
+            ofstream payment_done_list(payment_done_list_name);
+            for (auto &it : i.second.get_payment_done_list()){
+                payment_done_list << it << "\n";
+            }
+            payment_done_list.close();
             string payment_file_name = "Conference/Payment/";
             payment_file_name.append(i.second.get_c_name());
             payment_file_name.append(".txt");
