@@ -420,9 +420,15 @@ VIEW_CHOICES AdminDashboardView::display() {
             cin_space(venue);
             cout << "Time: ";
             cin_space(time);
+            wrong_seats:
             cout << "Number of available seats: ";
             cin >> seats;
             cin.ignore();
+            if(seats < 0){
+                cout << "Enter a non-negative integer\n";
+                system_pause
+                goto wrong_seats;
+            }
             Conference(name, date, venue, time);
             Conference::conference_list().find(name)->second.update_seat_available(seats);
             string s = "Hi";
