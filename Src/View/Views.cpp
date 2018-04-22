@@ -173,7 +173,7 @@ VIEW_CHOICES RegisterView::display() {
     cout << "Enter Gender[M/F/O]: ";
     cin_space(gender);
     if ((gender[0] != 'M' && gender[0] != 'F' && gender[0] != 'O' && gender[0] != 'm' && gender[0] != 'f' &&
-        gender[0] != 'o') || gender.size() != 1) {
+         gender[0] != 'o') || gender.size() != 1) {
         UserError error("Please enter from given options only!");
         cout << error.print_error() << endl;
         goto wrong_gender;
@@ -424,7 +424,7 @@ VIEW_CHOICES AdminDashboardView::display() {
             cout << "Number of available seats: ";
             cin >> seats;
             cin.ignore();
-            if(seats < 0){
+            if (seats < 0) {
                 cout << "Enter a non-negative integer\n";
                 system_pause
                 goto wrong_seats;
@@ -472,6 +472,10 @@ VIEW_CHOICES AdminDashboardView::display() {
                         string new_c_name;
                         cin_space(c_name);
                         Conference::conference_list().find(c_name)->second.update_c_name(new_c_name);
+                        Conference::conference_list().insert(pair<string, Conference>(new_c_name,
+                                                                                      Conference::conference_list().find(
+                                                                                              c_name)->second));
+                        Conference::conference_list().erase(c_name);
                         break;
                     }
                     case 2: {
@@ -508,9 +512,12 @@ VIEW_CHOICES AdminDashboardView::display() {
         }
         case 6: {
             wrong_username_grant:
-            cout << "Please enter the name of the user to grant superuser access: ";
+            cout << "Enter the name of the user to grant superuser access or enter $ to go back to dashboard: ";
             string username;
             cin_no_space(username);
+            if(username == "$"){
+                return ADMIN_DASHBOARD;
+            }
             auto user = User::all().find(username);
             if (user != User::all().end()) {
                 if (user->second.is_superuser()) {
@@ -532,9 +539,12 @@ VIEW_CHOICES AdminDashboardView::display() {
         }
         case 7: {
             wrong_username_revoke:
-            cout << "Please enter the name of the user to revoke superuser access: ";
+            cout << "Enter the name of the user to revoke superuser access or enter $ to go back to dashboard: ";
             string username;
             cin_no_space(username);
+            if (username == "$"){
+                return ADMIN_DASHBOARD;
+            }
             auto user = User::all().find(username);
             if (user != User::all().end()) {
                 if (user->second.is_superuser()) {
@@ -675,14 +685,14 @@ VIEW_CHOICES RegisterDetailView::display() {
             cout << "Total Number of Pending Registrations = "
                  << conference.give_total_number_of_pending_registrations() << endl;
         }
-        else{
+        else {
             cout << "No pending registrations\n";
         }
-        if(conference.give_total_number_of_attendees() != 0) {
+        if (conference.give_total_number_of_attendees() != 0) {
             cout << "Total Number of Authorized Registrations = " << conference.give_total_number_of_attendees()
                  << endl;
         }
-        else{
+        else {
             cout << "No authorized registrations\n";
         }
         cout << "\nChoose any one of the options\n";
@@ -691,7 +701,7 @@ VIEW_CHOICES RegisterDetailView::display() {
              << "\nEnter any other number to go back to the Dashboard\n";
         string input;
         cin_space(input);
-        if (input[0] != '1' && input[0] != '2' && input[0] != '3'){
+        if (input[0] != '1' && input[0] != '2' && input[0] != '3') {
             input = "0";
         }
         switch (stoi(input)) {
