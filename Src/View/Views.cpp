@@ -617,7 +617,16 @@ VIEW_CHOICES ConferenceDetailView::display() {
         cout << "Date: \t\t\t\t\t\t" << it.second.get_c_date() << endl;
         cout << "Time: \t\t\t\t\t\t" << it.second.get_c_time() << endl;
         cout << "Venue: \t\t\t\t\t\t" << it.second.get_c_venue() << endl;
-        cout << "Current Seat Availability: \t" << it.second.get_seats_available() << "\n\n";
+        cout << "Current Seat Availability: \t" << it.second.get_seats_available() << endl;
+        cout << "Types\t";
+        for (auto &i : Conference::conference_list().find(it.second.get_c_name())->second.payment_details().get_registration_type_list()){
+            cout << i.first << "\t";
+        }
+        cout << "\n\t\t\t";
+        for (auto &i : Conference::conference_list().find(it.second.get_c_name())->second.payment_details().get_registration_type_list()){
+            cout << i.second << "\t";
+        }
+        cout << "\n\n";
     }
     cout << "\n\n";
     system_pause
@@ -635,7 +644,7 @@ VIEW_CHOICES ConferenceDetailView::display() {
 
 VIEW_CHOICES RegisterDetailView::display() {
     if (!current_user->is_superuser()) {
-        cout << "\n\nExcess Denied\n\n";
+        cout << "\n\nAccess Denied\n\n";
         return VIEW_CHOICES(USER_DASHBOARD);
     }
     cout << "Registration Detail View\n\n";
