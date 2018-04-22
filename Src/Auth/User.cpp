@@ -221,7 +221,12 @@ void User::registered_conference_list_payment() {
         cin >> choice;
         if (choice > 0 && choice <= _registered_conference_list.size()) {
             choice--;
-            cout << "hi\n";
+            if(Conference::conference_list().find(_registered_conference_list[choice].first)->second.get_user_payment_status(current_user->get_username())){
+                cout << "Payment already processed!\n";
+                system_pause
+                return;
+            }
+            /*cout << "hi\n";*/
             cout << "The amount to be paid is Rs. " << Conference::conference_list().find(
                     _registered_conference_list[choice].first)->second.payment_details().get_payment_amount(
                     _registered_conference_list[choice].second);
