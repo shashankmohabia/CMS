@@ -80,10 +80,16 @@ VIEW_CHOICES Views::display() {
 VIEW_CHOICES SplashView::display() {
     cout << "Splash view" << endl;
     cout << "choose 1 option" << endl;
+    string input;
     int choice;
     cout << "1. Login\n2. Register\n3. Details\n4. Exit" << endl;
-    cin >> choice;
-    cin.ignore();
+    cin_space(input);
+    if(input != "1" && input != "2" && input != "3" && input != "4"){
+        choice = 0;
+    }
+    else{
+        choice = stoi(input);
+    }
     switch (choice) {
         case 1: {
             return VIEW_CHOICES(LOGIN);
@@ -98,7 +104,9 @@ VIEW_CHOICES SplashView::display() {
             return VIEW_CHOICES(EXIT);
         }
         default: {
-            cout << "Invalid Choice" << endl;
+            cout << "Please select a valid option!" << endl;
+            system_pause
+            return VIEW_CHOICES (SPLASH);
             break;
         }
     }
