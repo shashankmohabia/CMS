@@ -117,6 +117,7 @@ void Conference::show_registration_type_list(string r_type) {
 
 void Conference::update_registration_list(const string &username) {
     _registration_list.push_back(username);
+    _seats_available--;
 }
 
 int Conference::give_total_number_of_registrations() {
