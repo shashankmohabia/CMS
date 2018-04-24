@@ -54,16 +54,32 @@
 #define cin_no_int(var, name) {                                             \
             getline(cin,var);                                               \
             while(((var).find_first_not_of( "0123456789" ) == string::npos)){    \
-                cout << "Enter a valid " << name << ": ";                   \
+                cout << "Enter a valid " << (name) << ": ";                   \
                 getline(cin,var);                                           \
             }                                                               \
+        }
+
+#define cin_date(var) {                                                 \
+            cin_int(var, 6, "date");                                                \
+            while((var).size() != 6 || stoi((var).substr(2,2)) <= 0 || stoi((var).substr(2,2)) > 12 || stoi((var).substr(0,2)) <= 0 || stoi((var).substr(0,2)) > 31){    \
+                cout << "Enter a valid date in the specified format";   \
+                cin_int(var, 6, "date");                                                \
+            }   \
+        }
+
+#define cin_time(var) {                                                 \
+            cin_int(var, 4, "time");                                                \
+            while((var).size() != 4 || stoi((var).substr(2,2)) < 0 || stoi((var).substr(2,2)) > 59 || stoi((var).substr(0,2)) < 0 || stoi((var).substr(0,2)) > 23){    \
+                cout << "Enter a valid time in the specified format";   \
+                cin_int(var, 4, "time");                                                \
+            }   \
         }
 
 #define cin_no_int_no_space(var, name) {                                        \
             getline(cin,var);                                                   \
             while((var).find(" ") != std::string::npos || ((var).find_first_not_of( "0123456789" ) == string::npos)){   \
                 if(((var).find_first_not_of( "0123456789" ) == string::npos)){  \
-                    cout << "Enter a valid " << name << ": ";                   \
+                    cout << "Enter a valid " << (name) << ": ";                   \
                     getline(cin,var);                                           \
                 }                                                               \
                 else{                                                           \
@@ -250,6 +266,27 @@ VIEW_CHOICES UserDashboardView::display() {
             string c_name;
             cin_space(c_name);
             if (Conference::conference_list().find(c_name) != Conference::conference_list().end()) {
+                auto conference = Conference::conference_list().find(c_name)->second;
+                time_t curr_date = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+                struct std::tm a = {0, stoi(conference.get_c_time().substr(2, 2)),
+                                    stoi(conference.get_c_time().substr(0, 2)),
+                                    stoi(conference.get_c_date().substr(0, 2)),
+                                    stoi(conference.get_c_date().substr(2, 2)) - 1,
+                                    stoi(conference.get_c_date().substr(4, 2)) + 100};
+                time_t conf_date = mktime(&a);
+                if (curr_date != (std::time_t) (-1) && conf_date != (std::time_t) (-1)) {
+                    auto difference = static_cast<int>(std::difftime(conf_date, curr_date) / (60 * 60 * 24));
+                    if (difference < 7) {
+                        cout << "The registrations are closed for this conference\n";
+                        system_pause
+                        if (current_user->is_superuser()) {
+                            return ADMIN_DASHBOARD;
+                        }
+                        else {
+                            return USER_DASHBOARD;
+                        }
+                    }
+                }
                 if (Conference::conference_list().find(c_name)->second.get_seats_available() == 0) {
                     cout << "The registrations are closed for this confernce\n";
                     system_pause
@@ -414,12 +451,12 @@ VIEW_CHOICES AdminDashboardView::display() {
                 cout << "Please enter a unique name for conference. The name is already taken!\n";
                 goto wrong_conference_name;
             }
-            cout << "Date: ";
-            cin_no_space(date);
+            cout << "Date(DDMMYY): ";
+            cin_date(date);
             cout << "Venue: ";
             cin_space(venue);
-            cout << "Time: ";
-            cin_space(time);
+            cout << "Time(hhmm): ";
+            cin_time(time);
             wrong_seats:
             cout << "Number of available seats: ";
             cin >> seats;
@@ -481,14 +518,14 @@ VIEW_CHOICES AdminDashboardView::display() {
                     case 2: {
                         cout << "Enter the new date of the Conference: ";
                         string new_c_date;
-                        cin_no_space(new_c_date)
+                        cin_date(new_c_date);
                         Conference::conference_list().find(c_name)->second.update_c_date(new_c_date);
                         break;
                     }
                     case 3: {
                         cout << "Enter the new time of the Conference: ";
                         string new_c_time;
-                        cin_space(new_c_time);
+                        cin_time(new_c_time);
                         Conference::conference_list().find(c_name)->second.update_c_time(new_c_time);
                         break;
                     }
@@ -515,7 +552,7 @@ VIEW_CHOICES AdminDashboardView::display() {
             cout << "Enter the name of the user to grant superuser access or enter $ to go back to dashboard: ";
             string username;
             cin_no_space(username);
-            if(username == "$"){
+            if (username == "$") {
                 return ADMIN_DASHBOARD;
             }
             auto user = User::all().find(username);
@@ -542,7 +579,7 @@ VIEW_CHOICES AdminDashboardView::display() {
             cout << "Enter the name of the user to revoke superuser access or enter $ to go back to dashboard: ";
             string username;
             cin_no_space(username);
-            if (username == "$"){
+            if (username == "$") {
                 return ADMIN_DASHBOARD;
             }
             auto user = User::all().find(username);
@@ -629,19 +666,25 @@ VIEW_CHOICES PaymentView::display() {
 VIEW_CHOICES ConferenceDetailView::display() {
     cout << "Conference Detail View\n\n";
     for (auto &it : Conference::conference_list()) {
-        cout << "Name: \t\t\t\t\t\t" << it.second.get_c_name() << endl;
-        cout << "Date: \t\t\t\t\t\t" << it.second.get_c_date() << endl;
-        cout << "Time: \t\t\t\t\t\t" << it.second.get_c_time() << endl;
-        cout << "Venue: \t\t\t\t\t\t" << it.second.get_c_venue() << endl;
-        cout << "Current Seat Availability: \t" << it.second.get_seats_available() << endl;
+        auto conference = it.second;
+        struct std::tm a = {0, stoi(conference.get_c_time().substr(2, 2)),
+                            stoi(conference.get_c_time().substr(0, 2)),
+                            stoi(conference.get_c_date().substr(0, 2)),
+                            stoi(conference.get_c_date().substr(2, 2)) - 1,
+                            stoi(conference.get_c_date().substr(4, 2)) + 100};
+        time_t conf_date = mktime(&a);
+        cout << "Name: \t\t\t\t\t\t" << conference.get_c_name() << endl;
+        cout << "Date and Time: \t\t\t\t" << ctime(&conf_date);
+        cout << "Venue: \t\t\t\t\t\t" << conference.get_c_venue() << endl;
+        cout << "Current Seat Availability: \t" << conference.get_seats_available() << endl;
         cout << "Types\t";
         for (auto &i : Conference::conference_list().find(
-                it.second.get_c_name())->second.payment_details().get_registration_type_list()) {
+                conference.get_c_name())->second.payment_details().get_registration_type_list()) {
             cout << i.first << "\t";
         }
-        cout << "\n\t\t\t";
+        cout << "\nAmount\t";
         for (auto &i : Conference::conference_list().find(
-                it.second.get_c_name())->second.payment_details().get_registration_type_list()) {
+                conference.get_c_name())->second.payment_details().get_registration_type_list()) {
             cout << i.second << "\t";
         }
         cout << "\n\n";
