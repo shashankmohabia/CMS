@@ -3,19 +3,20 @@
 //
 
 #include <iostream>
+#include <chrono>
 #include "File.h"
 #include "../Conference Details/Conference.h"
 #include "../Auth/User.h"
 
 void File::read_conference_list() {
-    ifstream input("con.txt");
+    ifstream input("conference.txt");
     string read;
-    if (input.is_open()){
-        while (getline(input, read)){
+    if (input.is_open()) {
+        while (getline(input, read)) {
             if (read.empty()) {
                 cout << "Gotcha!" << "\n";
             }
-            else{
+            else {
                 string con_file_name = "Conference/";
                 con_file_name.append(read);
                 con_file_name.append(".txt");
@@ -58,16 +59,18 @@ void File::read_conference_list() {
                 registration_list_name.append(conference.get_c_name());
                 registration_list_name.append(".txt");
                 ifstream registration_list(registration_list_name);
-                while (getline(registration_list, read)){
-                    Conference::conference_list().find(conference.get_c_name())->second.get_registration_list().push_back(read);
+                while (getline(registration_list, read)) {
+                    Conference::conference_list().find(
+                            conference.get_c_name())->second.get_registration_list().push_back(read);
                 }
                 registration_list.close();
                 string payment_done_list_name = "Conference/Payment_Done_List/";
                 payment_done_list_name.append(conference.get_c_name());
                 payment_done_list_name.append(".txt");
                 ifstream payment_done_list(payment_done_list_name);
-                while (getline(registration_list, read)){
-                    Conference::conference_list().find(conference.get_c_name())->second.get_payment_done_list().push_back(read);
+                while (getline(registration_list, read)) {
+                    Conference::conference_list().find(
+                            conference.get_c_name())->second.get_payment_done_list().push_back(read);
                 }
                 payment_done_list.close();
                 string payment_file_name = "Conference/Payment/";
@@ -76,14 +79,16 @@ void File::read_conference_list() {
                 ifstream payment_file(payment_file_name);
                 string read_param_1, read_param_2;
                 while (getline(payment_file, read_param_1) && getline(payment_file, read_param_2)) {
-                    Conference::conference_list().find(conference.get_c_name())->second.payment_details().add_registration_type(read_param_1, stoi(read_param_2));
+                    Conference::conference_list().find(
+                            conference.get_c_name())->second.payment_details().add_registration_type(read_param_1,
+                                                                                                     stoi(read_param_2));
                 }
                 payment_file.close();
             }
         }
         input.close();
     }
-    else{
+    else {
         cout << "Unable to open file";
     }
 }
@@ -182,7 +187,7 @@ void File::read_user_list() {
                 ifstream user_reg_con_list(user_reg_con_list_name);
                 string read_param_1, read_param_2;
                 while (getline(user_reg_con_list, read_param_1) && getline(user_reg_con_list, read_param_2)) {
-                    cout << read_param_1 << endl << read_param_2 << endl;
+                    /*cout << read_param_1 << endl << read_param_2 << endl;*/
                     User::all().find(user.get_username())->second.update_registered_conference_list(
                             read_param_1, read_param_2);
                 }
@@ -197,9 +202,9 @@ void File::read_user_list() {
 }
 
 void File::write_conference_list() {
-    ofstream output("con.txt");
-    if(output.is_open()){
-        for(auto &i : Conference::conference_list()){
+    ofstream output("conference.txt");
+    if (output.is_open()) {
+        for (auto &i : Conference::conference_list()) {
             output << i.second.get_c_name() << "\n";
             string con_file_name = "Conference/";
             con_file_name.append(i.second.get_c_name());
@@ -215,7 +220,7 @@ void File::write_conference_list() {
             registration_list_name.append(i.second.get_c_name());
             registration_list_name.append(".txt");
             ofstream registration_list(registration_list_name);
-            for (auto &it : i.second.get_registration_list()){
+            for (auto &it : i.second.get_registration_list()) {
                 registration_list << it << "\n";
             }
             registration_list.close();
@@ -223,7 +228,7 @@ void File::write_conference_list() {
             payment_done_list_name.append(i.second.get_c_name());
             payment_done_list_name.append(".txt");
             ofstream payment_done_list(payment_done_list_name);
-            for (auto &it : i.second.get_payment_done_list()){
+            for (auto &it : i.second.get_payment_done_list()) {
                 payment_done_list << it << "\n";
             }
             payment_done_list.close();
@@ -231,14 +236,14 @@ void File::write_conference_list() {
             payment_file_name.append(i.second.get_c_name());
             payment_file_name.append(".txt");
             ofstream payment_file(payment_file_name);
-            for(auto &it : i.second.payment_details().get_registration_type_list()) {
-                payment_file << it.first <<"\n";
+            for (auto &it : i.second.payment_details().get_registration_type_list()) {
+                payment_file << it.first << "\n";
                 payment_file << it.second << "\n";
             }
             payment_file.close();
         }
     }
-    else{
+    else {
         cout << "Unable to open file";
     }
 }
